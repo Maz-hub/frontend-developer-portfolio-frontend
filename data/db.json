@@ -136,7 +136,7 @@
       "repo": "https://github.com/maz-hub/advice-generator-app",
       "date": "2025-08-20",
       "category": "FEM",
-      "featured": false,
+      "featured": true,
       "tech": [
         "React",
         "Tailwind CSS 4",
@@ -155,7 +155,7 @@
       "repo": "https://github.com/Maz-hub/react-character-counter",
       "date": "2025-10-03",
       "category": "FEM",
-      "featured": false,
+      "featured": true,
       "tech": [
         "React",
         "Tailwind CSS 4",

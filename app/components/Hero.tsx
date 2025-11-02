@@ -2,7 +2,7 @@ import { Link } from "react-router";
 
 const Hero = () => {
   return (
-    <header className="min-h-screen flex flex-col items-center justify-center px-6 py-10 bg-gray-900 text-light-gray transition-colors duration-300">
+    <header className="min-h-screen flex flex-col items-center justify-center px-6 py-10 bg-primary-blue-dark text-light-gray transition-colors duration-300">
       <div className="w-full max-w-5xl">
         {/* Top: Text */}
         <div className="text-center md:text-left mb-12">

@@ -46,7 +46,6 @@ const ContactPage = ({ actionData }: Route.ComponentProps) => {
       <div className="pointer-events-none absolute -bottom-64 -left-40 h-112 w-md rounded-full bg-glass-green opacity-55 blur-3xl" />
       <div className="pointer-events-none absolute top-1/3 left-1/2 h-64 w-64 -translate-x-1/2 rounded-full bg-glass-blue opacity-40 blur-3xl" />
 
-      <LiaMountainSolid className="pointer-events-none absolute left-4 sm:right-4 top-12 text-[180px] text-light-gray/5" />
       <FiCode className="pointer-events-none absolute right-10 bottom-24 text-[150px] text-light-gray/5" />
 
       <div className="relative z-10 mx-auto flex w-full max-w-6xl flex-col gap-16 px-6 py-24 lg:px-10">
