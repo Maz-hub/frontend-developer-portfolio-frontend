@@ -4,13 +4,13 @@ import { Link } from "react-router";
 const PostCard = ({ post }: { post: PostMeta }) => {
   return (
     <article className="group relative overflow-hidden rounded-[28px] border border-(--border-glass) bg-glass-gray/80 px-6 py-8 shadow-sm backdrop-blur transition hover:-translate-y-1 hover:shadow-lg sm:px-8 mb-6">
-      <div className="pointer-events-none absolute -top-20 right-[-6rem] h-40 w-40 rounded-full bg-glass-blue opacity-40 blur-2xl transition group-hover:opacity-60" />
-      <div className="pointer-events-none absolute bottom-[-6rem] left-[-4rem] h-32 w-32 rounded-full bg-glass-green opacity-40 blur-2xl transition group-hover:opacity-60" />
+      <div className="pointer-events-none absolute -top-20 -right-24 h-40 w-40 rounded-full bg-glass-blue opacity-40 blur-2xl transition group-hover:opacity-60" />
+      <div className="pointer-events-none absolute -bottom-24 -left-16 h-32 w-32 rounded-full bg-glass-green opacity-40 blur-2xl transition group-hover:opacity-60" />
 
       <div className="relative z-10 flex flex-col gap-4">
         <div className="flex flex-wrap items-center gap-3 text-xs uppercase tracking-[0.3em] text-medium-gray">
           <span className="rounded-full border border-(--border-glass) bg-primary-blue-dark/40 px-3 py-1">
-            {new Date(post.date).toLocaleDateString()}
+            {new Date(post.date).toDateString()}
           </span>
         </div>
 
