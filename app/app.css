@@ -80,12 +80,12 @@ body {
 
   /* Primary button */
   .btn-primary {
-    @apply bg-secondary-green text-primary-blue-dark px-8 py-4 rounded-lg hover:bg-accent-green transition;
+    @apply bg-secondary-green text-primary-blue-dark px-8 py-4 rounded-lg hover:bg-accent-green hover:font-semibold transition cursor-pointer;
   }
 
   /* Secondary button */
   .btn-secondary {
-    @apply border border-secondary-green text-light-gray px-8 py-4 rounded-lg hover:bg-accent-green hover:text-primary-blue-dark transition;
+    @apply border border-secondary-green text-light-gray px-8 py-4 rounded-lg hover:bg-accent-green hover:text-primary-blue-dark transition cursor-pointer;
   }
 
   /* Filter buttons */

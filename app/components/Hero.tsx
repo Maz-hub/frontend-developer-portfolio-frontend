@@ -1,6 +1,4 @@
 import { Link } from "react-router";
-import ProfilePhoto from "../assets/images/maz_profile_photo.jpeg";
-import MountainPhoto from "../assets/images/maz_profile_photo_mountains.jpeg";
 
 const Hero = () => {
   return (
@@ -23,12 +21,12 @@ const Hero = () => {
               <div className="absolute inset-0 perspective">
                 <div className="relative w-full h-full transition-transform duration-800 ease-[cubic-bezier(.2,.8,.2,1)] transform-gpu will-change-transform transform-style-preserve-3d group-hover:rotate-y-180">
                   <img
-                    src={ProfilePhoto}
+                    src="./images/maz_profile_photo.jpeg"
                     alt="Marianna Mirabile"
                     className="absolute inset-0 w-full h-full rounded-full object-cover backface-hidden"
                   />
                   <img
-                    src={MountainPhoto}
+                    src="./images/maz_profile_photo_mountains2.jpeg"
                     alt="Marianna in the mountains"
                     className="absolute inset-0 w-full h-full rounded-full object-cover rotate-y-180 backface-hidden"
                   />

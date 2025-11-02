@@ -13,13 +13,14 @@ const AboutPreview = () => {
             About Me
           </span>
           <h2 className="text-3xl font-bold text-pale-yellow md:text-4xl">
-            Building thoughtful frontend experiences with curiosity and care.
+            Turning ideas into clean, accessible, and user-friendly web
+            interfaces.
           </h2>
           <p className="text-medium-gray text-base md:text-lg leading-relaxed">
-            Hey, I&apos;m Marianna — friends call me Maz. I&apos;m a self-taught
-            frontend developer based in Switzerland, continuously learning
-            through practice, hands-on projects, and community challenges that
-            help me grow.
+            Hey, I&apos;m Marianna — or Maz, as most people know me. A
+            self-taught frontend developer based in the Swiss Riviera. I enjoy
+            building modern, scalable, efficient, and engaging web applications
+            that balance design and usability.
           </p>
 
           <div className="flex flex-wrap gap-3 text-sm text-medium-gray">
@@ -30,7 +31,10 @@ const AboutPreview = () => {
               From WordPress roots
             </span>
             <span className="rounded-full border border-(--border-glass) bg-glass-green/50 px-4 py-2 backdrop-blur">
-              Passionate lifelong learner
+              Curiosity in action
+            </span>
+            <span className="rounded-full border border-(--border-glass) bg-glass-green/50 px-4 py-2 backdrop-blur">
+              From hospitality to code
             </span>
           </div>
 
