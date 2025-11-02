@@ -41,9 +41,9 @@ const ContactPage = ({ actionData }: Route.ComponentProps) => {
   const successMessage = actionData?.message;
 
   return (
-    <div className="relative isolate overflow-hidden bg-gradient-to-b from-primary-blue-dark via-[#0b1423] to-[#04070d]">
-      <div className="pointer-events-none absolute -top-40 right-[-12rem] h-96 w-96 rounded-full bg-glass-yellow opacity-60 blur-3xl" />
-      <div className="pointer-events-none absolute bottom-[-16rem] left-[-10rem] h-[28rem] w-[28rem] rounded-full bg-glass-green opacity-55 blur-3xl" />
+    <div className="relative isolate overflow-hidden bg-linear-to-b from-primary-blue-dark via-[#0b1423] to-[#04070d]">
+      <div className="pointer-events-none absolute -top-40 -right-48 h-96 w-96 rounded-full bg-glass-yellow opacity-60 blur-3xl" />
+      <div className="pointer-events-none absolute -bottom-64 -left-40 h-112 w-md rounded-full bg-glass-green opacity-55 blur-3xl" />
       <div className="pointer-events-none absolute top-1/3 left-1/2 h-64 w-64 -translate-x-1/2 rounded-full bg-glass-blue opacity-40 blur-3xl" />
 
       <LiaMountainSolid className="pointer-events-none absolute left-4 sm:right-4 top-12 text-[180px] text-light-gray/5" />
