@@ -2,7 +2,7 @@ import { Link } from "react-router";
 
 const Hero = () => {
   return (
-    <header className="min-h-screen flex flex-col items-center justify-center px-6 py-10 bg-primary-blue-dark text-light-gray transition-colors duration-300">
+    <header className="min-h-[80vh] flex flex-col items-center justify-center px-6 py-10 bg-primary-blue-dark text-light-gray transition-colors duration-300">
       <div className="w-full max-w-5xl">
         {/* Top: Text */}
         <div className="text-center md:text-left mb-12">
@@ -47,16 +47,10 @@ const Hero = () => {
             </p>
 
             <div className="flex flex-wrap gap-4 mt-6 justify-center md:justify-start">
-              <Link
-                to="/projects"
-                className="bg-secondary-green text-primary-blue-dark px-8 py-4 rounded-lg hover:bg-accent-green transition"
-              >
+              <Link to="/projects" className="btn-primary">
                 View Projects
               </Link>
-              <Link
-                to="/contact"
-                className="border border-secondary-green text-light-gray px-8 py-4 rounded-lg hover:bg-accent-green hover:text-primary-blue-dark transition"
-              >
+              <Link to="/contact" className="btn-secondary">
                 Contact Me
               </Link>
             </div>

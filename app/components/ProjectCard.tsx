@@ -3,76 +3,78 @@ import { FaGithub } from "react-icons/fa";
 import { TfiWorld } from "react-icons/tfi";
 
 const ProjectCard = ({ project }: { project: Project }) => {
-  const formattedDate = new Date(project.date).toLocaleDateString("en-US", {
-    month: "long",
-    year: "numeric",
-  });
+  const formattedDate = new Date(project.date).toLocaleDateString();
 
   return (
-    <div className=" h-full flex flex-col rounded-lg overflow-hidden border shadow-sm transition hover:shadow-md hover:scale-[1.02] bg-glass-gray border-primary-blue-dark">
-      <img
-        src={project.image}
-        alt={project.title}
-        className="w-full object-cover rounded-sm"
-        // image glow
-        style={{ boxShadow: "0 0 8px rgba(14,26,43,0.6)" }}
-      />
+    <article className="flex h-full flex-col overflow-hidden rounded-3xl border border-(--border-glass) bg-primary-blue-dark/40 shadow-lg backdrop-blur transition hover:-translate-y-1 hover:shadow-xl">
+      {/* Image on top */}
+      <div className="overflow-hidden rounded-b-none rounded-3xl border-b border-(--border-glass) bg-glass-gray">
+        <img
+          src={project.image}
+          alt={project.title}
+          className="w-full h-full object-cover"
+        />
+      </div>
 
-      <div className="p-5 flex flex-1 flex-col gap-3">
-        {/* Title */}
-        <h3 className="text-2xl font-semibold text-dark">{project.title}</h3>
+      {/* Content */}
+      <div className="flex flex-1 flex-col gap-4 p-6 text-light-gray">
+        {/* Title + date */}
+        <header className="space-y-2">
+          <h3 className="text-2xl font-semibold text-pale-yellow">
+            {project.title}
+          </h3>
+          <p className="text-sm text-medium-gray">{formattedDate}</p>
+        </header>
 
         {/* Description */}
-        <p className="text-sm leading-relaxed text-light-gray">
+        <p className="text-base leading-relaxed text-light-gray/90">
           {project.description}
         </p>
 
         {/* Tech stack chips */}
-        <div className="flex flex-wrap gap-2 mt-2">
-          {project.tech.map((item) => (
-            <span
-              key={item}
-              className="text-xs px-2.5 py-1.5 rounded-md 
-                         text-light-gray
-                         bg-secondary-blue"
-            >
-              {item}
-            </span>
-          ))}
-        </div>
-
-        {/* Date only */}
-        <div className="text-xs mt-2 text-medium-gray">{formattedDate}</div>
+        {project.tech?.length ? (
+          <div className="mt-1 flex flex-wrap gap-2">
+            {project.tech.map((item) => (
+              <span
+                key={item}
+                className="rounded-full border border-(--border-glass) px-3 py-1 text-xs uppercase tracking-[0.3em] bg-glass-blue text-light-gray"
+              >
+                {item}
+              </span>
+            ))}
+          </div>
+        ) : null}
 
         {/* Buttons */}
+        <div className="mt-auto flex flex-wrap gap-3 pt-2">
+          {project.url && (
+            <a
+              href={project.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn-primary inline-flex items-center gap-2 px-6 py-3"
+              aria-label={`${project.title} — Live Demo`}
+            >
+              <TfiWorld size={24} />
+              Live project
+            </a>
+          )}
 
-        <div className="flex flex-col sm:flex-row justify-center gap-4 text-center mt-auto pt-5">
-          {/* Live Demo Button */}
-          <a
-            href={project.url}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex items-center justify-center gap-2 text-sm font-medium btn-primary"
-            aria-label={`${project.title} — Live Demo`}
-          >
-            <TfiWorld size={24} />
-            Live Demo
-          </a>
-
-          {/* GitHub Button */}
-          <a
-            href={project.repo}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex items-center justify-center gap-2  text-sm font-medium btn-secondary"
-            aria-label={`${project.title} — GitHub Repository`}
-          >
-            <FaGithub size={24} />
-            View the Code
-          </a>
+          {project.repo && (
+            <a
+              href={project.repo}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn-secondary inline-flex items-center gap-2 px-6 py-3"
+              aria-label={`${project.title} — GitHub Repository`}
+            >
+              <FaGithub size={24} />
+              View code
+            </a>
+          )}
         </div>
       </div>
-    </div>
+    </article>
   );
 };
 

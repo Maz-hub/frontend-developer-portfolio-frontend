@@ -13,7 +13,7 @@
   --border-glass: rgba(255, 255, 255, 0.08);
 
   /* Green */
-  --color-accent-green: #5fb025;
+  --color-accent-green: #7BCB3A;
   --color-secondary-green: #6ab030;
   --color-dark-green: #0e7b16;
   --color-glass-green: rgba(95, 176, 37, 0.06);
@@ -81,7 +81,7 @@ body {
 
   /* Primary button */
   .btn-primary {
-    @apply bg-secondary-green text-primary-blue-dark px-8 py-4 rounded-lg hover:bg-accent-green hover:font-semibold transition cursor-pointer;
+    @apply bg-secondary-green text-primary-blue-dark px-8 py-4 rounded-lg hover:bg-accent-green transition cursor-pointer;
   }
 
   /* Secondary button */

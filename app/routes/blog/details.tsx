@@ -1,6 +1,6 @@
 import ReactMarkdown from "react-markdown";
 import type { Route } from "./+types/details";
-import type { PostMeta } from "~/types";
+import type { Post, StrapiResponse, StrapiPost } from "~/types";
 import { Link } from "react-router";
 import { FiArrowLeft } from "react-icons/fi";
 import { BsJournalCode } from "react-icons/bs";
@@ -8,34 +8,39 @@ import { BsJournalCode } from "react-icons/bs";
 export async function loader({ request, params }: Route.LoaderArgs) {
   const { slug } = params;
 
-  const url = new URL("/posts-meta.json", request.url);
-  const res = await fetch(url.href);
+  const res = await fetch(
+    `${import.meta.env.VITE_API_URL}/posts?filters[slug][$eq]=${slug}&populate=image`
+  );
 
   if (!res.ok) throw new Error("Failed to fetch data");
-  const index = await res.json();
 
-  const postMeta = index.find((post: PostMeta) => post.slug === slug);
+  const json: StrapiResponse<StrapiPost> = await res.json();
 
-  if (!postMeta) throw (new Response("Not Found"), { status: 404 });
+  if (!json.data.length) throw (new Response("Not Found"), { status: 404 });
 
-  // Dynamically import the raw markdown
-  const markdown = await import(`../../posts/${slug}.md?raw`);
+  const item = json.data[0];
 
-  return {
-    postMeta,
-    markdown: markdown.default,
+  const post = {
+    id: item.id,
+    slug: item.slug,
+    excerpt: item.excerpt,
+    title: item.title,
+    date: item.date,
+    body: item.body,
+    image: item.image?.url ? `${item.image.url}` : null,
   };
+
+  return { post };
 }
 
 type BlogPostDetailsPageProps = {
   loaderData: {
-    postMeta: PostMeta;
-    markdown: string;
+    post: Post;
   };
 };
 
 const BlogPostDetailsPage = ({ loaderData }: BlogPostDetailsPageProps) => {
-  const { postMeta, markdown } = loaderData;
+  const { post } = loaderData;
 
   return (
     <div className="relative isolate overflow-hidden bg-linear-to-b from-primary-blue-dark via-[#0b1423] to-[#04070d]">
@@ -53,20 +58,28 @@ const BlogPostDetailsPage = ({ loaderData }: BlogPostDetailsPageProps) => {
           </span>
           <div className="space-y-4">
             <h1 className="text-4xl font-bold leading-tight text-pale-yellow md:text-5xl">
-              {postMeta.title}
+              {post.title}
             </h1>
             <span className="inline-flex rounded-full border border-(--border-glass) bg-primary-blue-dark/40 px-3 py-1 text-xs font-semibold uppercase tracking-[0.3em] text-medium-gray">
-              {new Date(postMeta.date).toDateString()}
+              {new Date(post.date).toDateString()}
             </span>
           </div>
         </header>
 
-        <article className="relative rounded-[32px] border border-(--border-glass) bg-glass-gray px-6 py-10 shadow-xl backdrop-blur md:px-10">
+        <article className="relative rounded-4xl border border-(--border-glass) bg-glass-gray px-6 py-10 shadow-xl backdrop-blur md:px-10">
           <div className="pointer-events-none absolute -top-24 -right-32 h-52 w-52 rounded-full bg-glass-blue opacity-40 blur-3xl" />
           <div className="pointer-events-none absolute -bottom-40 -left-24 h-60 w-60 rounded-full bg-glass-green opacity-35 blur-3xl" />
 
+          {post.image && (
+            <img
+              src={post.image}
+              alt={post.title}
+              className="w-full object-cover mb-6 rounded-xl"
+            />
+          )}
+
           <div className="relative z-10 prose prose-invert max-w-none">
-            <ReactMarkdown>{markdown}</ReactMarkdown>
+            <ReactMarkdown>{post.body}</ReactMarkdown>
           </div>
         </article>
 

@@ -1,71 +1,80 @@
-# 🌐 Frontend Developer Portfolio (React + Tailwind 4 + Vite)
+# Frontend Developer Portfolio
 
-This is my personal **Frontend Developer Portfolio**, built with **React**, **React Router 7**, **Tailwind CSS v4**, and **Vite**.  
-It showcases my real projects, experiments, and growth as I transition into frontend development.
+Hey there! 👋 This repo hosts my personal portfolio — a calm, glassmorphic space where I document projects, learning notes, milestones, and the journey of growing into a frontend developer.
 
----
+## What You'll Find
 
-## ✨ Overview
+- Responsive React Router 7 app powered by Vite + TypeScript.
+- Real projects and blog posts pulled from my Strapi CMS through typed loaders.
+- Friendly storytelling across Home, Projects, Blog, About, and Contact routes.
+- A cohesive Tailwind CSS v4 design system with reusable button/utilities and glass UI.
 
-The portfolio is designed to reflect who I am as a developer — **curious, detail-oriented, and grounded** — with a clean, minimal UI built around calm dark blue tones, green and soft yellow accents, and simple, clear typography.
+## Tech & Tools
 
-Everything you see here is part of my learning and creation process, built project by project.
+- **React 19 + React Router 7** for data-driven routing, loaders, and nested layouts.
+- **TypeScript** types in `app/types.ts` so API responses stay predictable.
+- **Tailwind CSS v4** with a custom theme (see `app/app.css`) for tokens, glass colors, and helper utilities.
+- **Vite** for lightning-fast dev/build plus `@react-router/dev` for DX.
+- **Framer Motion** animates project cards and filter changes.
+- **React Markdown** renders long-form blog articles.
+- **React Icons** supplies consistent iconography.
+- **Formspree** handles the serverless contact form.
 
----
+## Page Highlights
 
-## ⚙️ Tech Stack
+### Home
 
-- **React 18** – component-based UI  
-- **React Router 7** – for navigation and routing  
-- **Tailwind CSS v4** – with custom CSS variables and utility tokens  
-- **Vite** – lightning-fast dev environment  
-- **Outfit** – global sans-serif font for readability  
-- **JSON data** – for project storage and filtering logic
+- Hero card with a playful flip-photo animation, CTA buttons, and focus statement.
+- Featured projects pulled from Strapi (`featured=true`) plus a tech stack grid and About preview.
 
----
+### Projects
 
-## 🧭 Current Features
+- Fetches every project from Strapi, sorts newest-first, and lets you filter by category.
+- Pagination + Framer Motion transitions keep the list quick and smooth.
+- `ProjectCard` chips showcase tech used, with external links to live demos and repos.
 
-✅ **Projects Page**  
-- Displays all projects dynamically from `db.json`  
-- Filter by category (Frontend Mentor / CS50W / Freelance)  
-- Pagination and sorting (newest first)
+### Blog
 
-✅ **Design System**  
-- Custom color tokens and button utilities (`btn-primary`, `btn-secondary`, `btn-filter-active`, `btn-filter-default`)  
-- Dark navy base with green + pastel yellow accents  
-- Minimal, clean layout (no glow or neon effects)  
+- Searchable list with pagination to surface learning notes and reflections.
+- Detail pages render Markdown (body) and optional hero image, with glass-styled wrappers.
 
-✅ **Typography & Font**  
-- Global font set via CSS variable `--font-sans: "Outfit"`  
-- Tailored for readability and visual balance
+### About
 
----
+- Long-form storytelling broken into sections, timeline facts, guiding principles, certification list, and mini gallery.
+- Designed as a calm narrative to share the non-linear path from hospitality to code.
 
-## 🚧 Next Step
+### Contact
 
-🟢 Building the **Featured Projects** section on the homepage  
-Only projects with `"featured": true` in `db.json` will be displayed.
+- Sticky navigation routes to a Formspree-powered contact form that resets on submit.
+- Provides location, email, and “think · build · improve · repeat” mantra with glass info card.
 
+## Design Direction
 
----
+- Primary palette: deep navy base with soft greens and pale yellows for highlights.
+- Rounded corners, layered gradients, and blurred shapes create the glass look.
+- Button utilities (`btn-primary`, `btn-secondary`) and flip-card helpers live in `app/app.css`.
+- Typography stays clean with Atkinson Hyperlegible and generous tracking on labels.
 
-## 🎨 Design Direction
+## Available Scripts
 
-- **Base color:** Dark navy (`--surface`)
-- **Accent colors:** Green (`--accent-green`), Soft pastel yellow (`--accent-yellow`)
-- **Typography:** Clean, rounded, friendly  
-- **UI tone:** Calm, minimal, modern
+| Command               | Description                                                    |
+| --------------------- | -------------------------------------------------------------- |
+| `npm run dev`         | Starts the local dev server via React Router + Vite.           |
+| `npm run build`       | Builds the production bundle.                                  |
+| `npm run start`       | Serves the built app (`react-router-serve`).                   |
+| `npm run typecheck`   | Runs React Router typegen plus TypeScript.                     |
+| `npm run json-server` | Optional helper to mock APIs from `data/db.json` (if present). |
 
+## Project Structure (excerpt)
 
----
+```
+app/
+  components/        // Hero, PostCard, ProjectCard, Preview, etc.
+  routes/            // Home, Projects, Blog (index + details), About, Contact
+  app.css            // Tailwind theme + shared utilities
+  types.ts           // Shared TypeScript models for posts & projects
+public/
+  images/            // Portraits, hero photos, blog placeholders
+```
 
-## 🚀 Setup
-
-To run locally:
-
-```bash
-npm install
-npm run dev
-
-
+Thanks 💚

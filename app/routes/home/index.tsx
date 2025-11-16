@@ -1,8 +1,8 @@
 import type { Route } from "./+types/index";
 import FeaturedProjects from "~/components/FeaturedProjects";
-import type { Project } from "~/types";
+import type { Project, StrapiProject, StrapiResponse } from "~/types";
 import AboutPreview from "~/components/AboutPreview";
-import { Link } from "react-router";
+import { Link } from "react-router"; // keep whatever you use in this project
 
 export function meta({}: Route.MetaArgs) {
   return [
@@ -18,10 +18,26 @@ export function meta({}: Route.MetaArgs) {
 export async function loader({
   request,
 }: Route.LoaderArgs): Promise<{ projects: Project[] }> {
-  const res = await fetch(`${import.meta.env.VITE_API_URL}/projects`);
-  const data = await res.json();
+  const res = await fetch(
+    `${import.meta.env.VITE_API_URL}/projects?filters[featured][$eq]=true&populate=*`
+  );
+  const json: StrapiResponse<StrapiProject> = await res.json();
 
-  return { projects: data };
+  const projects: Project[] = json.data.map((item) => ({
+    id: item.id,
+    documentId: item.documentId,
+    title: item.title,
+    description: item.description,
+    image: item.image?.url ? `${item.image.url}` : "/images/no-image.png",
+    url: item.url,
+    repo: item.repo,
+    date: item.date,
+    category: item.category,
+    featured: item.featured,
+    tech: item.tech ? item.tech.map((t) => t.name) : [],
+  }));
+
+  return { projects };
 }
 
 const HomePage = ({ loaderData }: Route.ComponentProps) => {
@@ -82,16 +98,16 @@ const HomePage = ({ loaderData }: Route.ComponentProps) => {
   ];
 
   return (
-    <div className="relative isolate overflow-hidden bg-gradient-to-b from-primary-blue-dark via-[#0b1423] to-[#04070d]">
-      <div className="pointer-events-none absolute -top-48 left-[-12rem] h-[30rem] w-[30rem] rounded-full bg-glass-green opacity-60 blur-3xl" />
-      <div className="pointer-events-none absolute bottom-[-20rem] right-[-14rem] h-[34rem] w-[34rem] rounded-full bg-glass-yellow opacity-55 blur-3xl" />
+    <div className="relative isolate overflow-hidden bg-linear-to-b from-primary-blue-dark via-[#0b1423] to-[#04070d]">
+      <div className="pointer-events-none absolute -top-48 -left-48 h-120 w-120 rounded-full bg-glass-green opacity-60 blur-3xl" />
+      <div className="pointer-events-none absolute -bottom-80 -right-56 h-136 w-136 rounded-full bg-glass-yellow opacity-55 blur-3xl" />
       <div className="pointer-events-none absolute top-1/3 left-1/2 h-72 w-72 -translate-x-1/2 rounded-full bg-glass-blue opacity-40 blur-3xl" />
 
       <div className="relative z-10 mx-auto flex w-full max-w-6xl flex-col gap-16 px-6 py-24 lg:px-10">
         <FeaturedProjects
           projects={projects}
           count={4}
-          className="rounded-[32px] border border-(--border-glass) bg-glass-gray px-6 py-10 shadow-lg backdrop-blur md:px-10"
+          className="rounded-4xl border border-(--border-glass) bg-glass-gray px-6 py-10 shadow-lg backdrop-blur md:px-10"
         />
 
         <section className="space-y-8">
@@ -103,7 +119,7 @@ const HomePage = ({ loaderData }: Route.ComponentProps) => {
               My go-to languages, tools, and what I’m learning next.
             </p>
           </div>
-          <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-4">
+          <div className="grid gap-6 md:grid-cols-2">
             {techSections.map((section) => (
               <div
                 key={section.title}
@@ -116,10 +132,10 @@ const HomePage = ({ loaderData }: Route.ComponentProps) => {
                   {section.description}
                 </p>
                 <div className="mt-4 flex flex-wrap gap-2">
-                  {section.items.map((item, index) => (
+                  {section.items.map((item) => (
                     <span
                       key={item}
-                      className={`rounded-full border border-gray-300 px-3 py-1 text-xs font-semibold uppercase tracking-[0.2em] text-gray-400`}
+                      className="rounded-full border border-gray-300 px-3 py-1 text-xs  uppercase tracking-[0.2em] text-gray-400"
                     >
                       {item}
                     </span>
@@ -129,6 +145,7 @@ const HomePage = ({ loaderData }: Route.ComponentProps) => {
             ))}
           </div>
         </section>
+
         <AboutPreview />
 
         <section className="rounded-3xl border border-(--border-glass) bg-glass-blue/70 px-6 py-10 text-center shadow-lg backdrop-blur md:px-10">

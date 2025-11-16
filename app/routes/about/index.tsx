@@ -137,9 +137,9 @@ const AboutPage = () => {
   ];
 
   return (
-    <div className="relative isolate overflow-hidden bg-gradient-to-b from-primary-blue-dark via-[#0b1423] to-[#04070d]">
-      <div className="pointer-events-none absolute -top-36 right-[-6rem] h-80 w-80 rounded-full bg-glass-yellow opacity-70 blur-3xl" />
-      <div className="pointer-events-none absolute bottom-[-12rem] left-[-6rem] h-[28rem] w-[28rem] rounded-full bg-glass-green opacity-60 blur-3xl" />
+    <div className="relative isolate overflow-hidden bg-linear-to-b from-primary-blue-dark via-[#0b1423] to-[#04070d]">
+      <div className="pointer-events-none absolute -top-36 -right-24 h-80 w-80 rounded-full bg-glass-yellow opacity-70 blur-3xl" />
+      <div className="pointer-events-none absolute -bottom-48 -left-24 h-112 w-md rounded-full bg-glass-green opacity-60 blur-3xl" />
       <div className="pointer-events-none absolute top-1/3 left-1/2 h-64 w-64 -translate-x-1/2 rounded-full bg-glass-blue opacity-40 blur-3xl" />
 
       <div className="relative z-10 mx-auto flex max-w-6xl flex-col gap-24 px-6 py-24">
@@ -165,7 +165,7 @@ const AboutPage = () => {
 
           <div className="relative mx-auto w-full max-w-sm">
             <div className="absolute -inset-6 rounded-[36px] border border-(--border-glass) bg-glass-blue opacity-70 blur-lg" />
-            <div className="relative overflow-hidden rounded-[32px] border border-(--border-glass) bg-glass-blue backdrop-blur-lg">
+            <div className="relative overflow-hidden rounded-4xl border border-(--border-glass) bg-glass-blue backdrop-blur-lg">
               <img
                 src="/images/maz_bio.jpeg"
                 alt="Marianna"
@@ -256,32 +256,34 @@ const AboutPage = () => {
             </h2>
             <p className="text-medium-gray">
               The moments, courses, and collaborations that keep widening my
-              perspective — and remind me to stay a learner first.
+              perspective and remind me to stay a learner first.
             </p>
           </div>
 
           <div className="grid gap-6 md:grid-cols-2">
-            {credentials.map((item) => (
-              <div
-                key={`${item.title}-${item.year}`}
-                className="flex flex-col gap-3 rounded-2xl border border-(--border-glass) bg-glass-gray px-6 py-6 shadow-sm backdrop-blur transition hover:-translate-y-1 hover:shadow-md"
-              >
-                <div className="flex items-center justify-between text-medium-gray">
-                  <span className="text-xs uppercase tracking-[0.3em]">
-                    {item.issuer}
-                  </span>
-                  <span className="text-xs font-semibold text-light-yellow">
-                    {item.year}
-                  </span>
+            {[...credentials]
+              .sort((a, b) => parseInt(b.year) - parseInt(a.year))
+              .map((item) => (
+                <div
+                  key={`${item.title}-${item.year}`}
+                  className="flex flex-col gap-3 rounded-2xl border border-(--border-glass) bg-glass-gray px-6 py-6 shadow-sm backdrop-blur transition hover:-translate-y-1 hover:shadow-md"
+                >
+                  <div className="flex items-center justify-between text-medium-gray">
+                    <span className="text-xs uppercase tracking-[0.3em]">
+                      {item.issuer}
+                    </span>
+                    <span className="text-xs font-semibold text-light-yellow">
+                      {item.year}
+                    </span>
+                  </div>
+                  <h3 className="text-lg font-semibold text-light-yellow">
+                    {item.title}
+                  </h3>
+                  <p className="text-sm leading-relaxed text-medium-gray">
+                    {item.description}
+                  </p>
                 </div>
-                <h3 className="text-lg font-semibold text-light-yellow">
-                  {item.title}
-                </h3>
-                <p className="text-sm leading-relaxed text-medium-gray">
-                  {item.description}
-                </p>
-              </div>
-            ))}
+              ))}
           </div>
 
           <div className="space-y-4">

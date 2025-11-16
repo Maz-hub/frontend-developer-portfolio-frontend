@@ -1,17 +1,33 @@
 import { useState } from "react";
 import ProjectCard from "~/components/ProjectCard";
 import type { Route } from "./+types/index";
-import type { Project } from "~/types";
+import type { Project, StrapiProject, StrapiResponse } from "~/types";
 import Pagination from "~/components/Pagination";
 import { AnimatePresence, motion } from "framer-motion";
 
 export async function loader({
   request,
 }: Route.LoaderArgs): Promise<{ projects: Project[] }> {
-  const res = await fetch(`${import.meta.env.VITE_API_URL}/projects`);
-  const data = await res.json();
+  const res = await fetch(
+    `${import.meta.env.VITE_API_URL}/projects?populate=*`
+  );
+  const json: StrapiResponse<StrapiProject> = await res.json();
 
-  return { projects: data };
+  const projects = json.data.map((item) => ({
+    id: item.id,
+    title: item.title,
+    documentId: item.documentId,
+    description: item.description,
+    image: item.image?.url ? `${item.image.url}` : "/images/no-image.png",
+    url: item.url,
+    repo: item.repo,
+    date: item.date,
+    category: item.category,
+    tech: item.tech ? item.tech.map((t) => t.name) : [],
+    featured: item.featured,
+  }));
+
+  return { projects };
 }
 
 const ProjectsPage = ({ loaderData }: Route.ComponentProps) => {
@@ -43,10 +59,10 @@ const ProjectsPage = ({ loaderData }: Route.ComponentProps) => {
   const currentProjects = filteredProjects.slice(indexOfFirst, indexOfLast);
 
   return (
-    <div className="relative isolate overflow-hidden bg-gradient-to-b from-primary-blue-dark via-[#0b1423] to-[#04070d]">
-      <div className="pointer-events-none absolute -top-40 left-[-10rem] h-72 w-72 rounded-full bg-glass-green opacity-60 blur-3xl" />
-      <div className="pointer-events-none absolute top-1/3 right-[-8rem] h-96 w-96 rounded-full bg-glass-yellow opacity-50 blur-3xl" />
-      <div className="pointer-events-none absolute bottom-[-14rem] left-1/2 h-[28rem] w-[28rem] -translate-x-1/2 rounded-full bg-glass-blue opacity-40 blur-3xl" />
+    <div className="relative isolate overflow-hidden bg-linear-to-b from-primary-blue-dark via-[#0b1423] to-[#04070d]">
+      <div className="pointer-events-none absolute -top-40 -left-40 h-72 w-72 rounded-full bg-glass-green opacity-60 blur-3xl" />
+      <div className="pointer-events-none absolute top-1/3 -right-32 h-96 w-96 rounded-full bg-glass-yellow opacity-50 blur-3xl" />
+      <div className="pointer-events-none absolute -bottom-56 left-1/2 h-112 w-md -translate-x-1/2 rounded-full bg-glass-blue opacity-40 blur-3xl" />
 
       <div className="relative z-10 mx-auto flex w-full max-w-[1200px] flex-col gap-16 px-6 py-24 lg:px-10">
         <section className="space-y-6">
