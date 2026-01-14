@@ -10,9 +10,9 @@ const AboutPage = () => {
     },
     {
       label: "Current focus",
-      value: "React & TanStack",
+      value: "React Frontend Engineering",
       description:
-        "Deepening React skills and learning modern frontend tools for data-driven apps.",
+        "Advancing in React for clean, performant, and scalable UIs.",
     },
     {
       label: "Latest milestone",
