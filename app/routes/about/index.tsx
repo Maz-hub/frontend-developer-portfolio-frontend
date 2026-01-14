@@ -137,13 +137,13 @@ const AboutPage = () => {
   ];
 
   return (
-    <div className="relative isolate overflow-hidden bg-linear-to-b from-primary-blue-dark via-[#0b1423] to-[#04070d]">
+    <div className="relative isolate overflow-hidden md:bg-linear-to-b md:from-primary-blue-dark md:via-[#0b1423] md:to-[#04070d]">
       <div className="pointer-events-none absolute -top-36 -right-24 h-80 w-80 rounded-full bg-glass-yellow opacity-70 blur-3xl" />
       <div className="pointer-events-none absolute -bottom-48 -left-24 h-112 w-md rounded-full bg-glass-green opacity-60 blur-3xl" />
       <div className="pointer-events-none absolute top-1/3 left-1/2 h-64 w-64 -translate-x-1/2 rounded-full bg-glass-blue opacity-40 blur-3xl" />
 
-      <div className="relative z-10 mx-auto flex max-w-6xl flex-col gap-24 px-6 py-24">
-        <section className="grid gap-14 md:grid-cols-[1.2fr_1fr] md:items-center">
+      <div className="relative z-10 mx-auto flex max-w-6xl flex-col gap-24 px-0 py-24 sm:px-6">
+        <section className="grid gap-14 px-4 sm:px-0 md:grid-cols-[1.2fr_1fr] md:items-center">
           <div className="space-y-8">
             <span className="inline-flex items-center gap-2 rounded-full bg-glass-green px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.35em] text-light-gray">
               <span className="h-2 w-2 rounded-full bg-accent-green" />
@@ -164,7 +164,7 @@ const AboutPage = () => {
           </div>
 
           <div className="relative mx-auto w-full max-w-sm">
-            <div className="absolute -inset-6 rounded-[36px] border border-(--border-glass) bg-glass-blue opacity-70 blur-lg" />
+            <div className="absolute -inset-6 rounded-2xl border border-(--border-glass) bg-glass-blue opacity-70 blur-lg" />
             <div className="relative overflow-hidden rounded-4xl border border-(--border-glass) bg-glass-blue backdrop-blur-lg">
               <img
                 src="/images/maz_bio.jpeg"
@@ -172,7 +172,7 @@ const AboutPage = () => {
                 className="h-full w-full object-cover"
               />
             </div>
-            <div className="absolute -bottom-6 -left-6 rounded-2xl border border-(--border-glass) bg-glass-yellow px-6 py-4 shadow-lg backdrop-blur">
+            <div className="absolute -bottom-6 rounded-2xl border border-(--border-glass) bg-glass-yellow px-6 py-4 shadow-lg backdrop-blur sm:-left-6">
               <p className="text-xs uppercase tracking-[0.25em] text-primary-blue-dark">
                 15+ years curious
               </p>
@@ -188,7 +188,7 @@ const AboutPage = () => {
             {quickFacts.map((fact) => (
               <div
                 key={fact.label}
-                className="rounded-2xl border border-(--border-glass) bg-glass-gray px-6 py-7 shadow-sm backdrop-blur"
+                className="rounded-2xl border border-(--border-glass) bg-glass-gray px-4 py-7 shadow-sm backdrop-blur sm:px-6"
               >
                 <p className="text-xs uppercase tracking-[0.25em] text-medium-gray">
                   {fact.label}
@@ -204,7 +204,7 @@ const AboutPage = () => {
           </div>
         </section>
 
-        <section className="space-y-12">
+        <section className="space-y-12 px-4 sm:px-0">
           <div className="mx-auto max-w-2xl text-center space-y-4">
             <h2 className="text-3xl font-semibold text-light-yellow md:text-4xl">
               The journey so far
@@ -220,7 +220,7 @@ const AboutPage = () => {
             {journeySections.map((section) => (
               <article
                 key={section.title}
-                className="relative border-l border-(--border-glass) pl-8"
+                className="relative border-l border-(--border-glass) pl-6 pr-4 sm:pl-8 sm:pr-0"
               >
                 <span className="absolute -left-[0.6rem] top-0 h-3 w-3 rounded-full border border-(--border-glass) bg-light-yellow shadow-md" />
                 <h3 className="text-2xl font-semibold text-light-yellow">
@@ -236,7 +236,7 @@ const AboutPage = () => {
           </div>
         </section>
 
-        <section className="grid gap-8 rounded-3xl border border-(--border-glass) bg-glass-blue px-8 py-10 backdrop-blur md:grid-cols-3">
+        <section className="grid gap-8 rounded-2xl border border-(--border-glass) bg-glass-blue px-4 py-10 backdrop-blur md:grid-cols-3 md:px-8">
           {guidingPrinciples.map((principle) => (
             <div key={principle.title} className="space-y-3">
               <h3 className="text-lg font-semibold text-light-yellow">
@@ -266,7 +266,7 @@ const AboutPage = () => {
               .map((item) => (
                 <div
                   key={`${item.title}-${item.year}`}
-                  className="flex flex-col gap-3 rounded-2xl border border-(--border-glass) bg-glass-gray px-6 py-6 shadow-sm backdrop-blur transition hover:-translate-y-1 hover:shadow-md"
+                  className="flex flex-col gap-3 rounded-2xl border border-(--border-glass) bg-glass-gray px-4 py-6 shadow-sm backdrop-blur transition hover:-translate-y-1 hover:shadow-md sm:px-6"
                 >
                   <div className="flex items-center justify-between text-medium-gray">
                     <span className="text-xs uppercase tracking-[0.3em]">
@@ -307,7 +307,7 @@ const AboutPage = () => {
           </div>
         </section>
 
-        <section className="relative overflow-hidden rounded-3xl border border-(--border-glass) bg-glass-gray px-8 py-12 text-center backdrop-blur">
+        <section className="relative overflow-hidden rounded-2xl border border-(--border-glass) bg-glass-gray px-5 py-12 text-center backdrop-blur md:px-8">
           <div className="absolute inset-y-0 left-0 hidden w-2/5 skew-x-[-20deg] bg-glass-yellow opacity-20 md:block" />
           <div className="relative flex flex-col items-center gap-6 md:flex-row md:justify-between">
             <div className="max-w-xl text-left space-y-3">

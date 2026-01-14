@@ -37,14 +37,14 @@ import { LiaMountainSolid } from "react-icons/lia";
 
 const ContactPage = ({ actionData }: Route.ComponentProps) => {
   return (
-    <div className="relative isolate overflow-hidden bg-linear-to-b from-primary-blue-dark via-[#0b1423] to-[#04070d]">
+    <div className="relative isolate overflow-hidden md:bg-linear-to-b md:from-primary-blue-dark md:via-[#0b1423] md:to-[#04070d]">
       <div className="pointer-events-none absolute -top-40 -right-48 h-96 w-96 rounded-full bg-glass-yellow opacity-60 blur-3xl" />
       <div className="pointer-events-none absolute -bottom-64 -left-40 h-112 w-md rounded-full bg-glass-green opacity-55 blur-3xl" />
       <div className="pointer-events-none absolute top-1/3 left-1/2 h-64 w-64 -translate-x-1/2 rounded-full bg-glass-blue opacity-40 blur-3xl" />
 
       <FiCode className="pointer-events-none absolute right-10 bottom-24 text-[150px] text-light-gray/5" />
 
-      <div className="relative z-10 mx-auto flex w-full max-w-6xl flex-col gap-16 px-6 py-24 lg:px-10">
+      <div className="relative z-10 mx-auto flex w-full max-w-6xl flex-col gap-16 px-0 py-24 sm:px-6 lg:px-10">
         <section className="grid gap-12 lg:grid-cols-[1fr_1.2fr] lg:items-start">
           <div className="space-y-8">
             <span className="inline-flex items-center gap-2 rounded-full bg-glass-green px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.35em] text-light-gray">
@@ -61,7 +61,7 @@ const ContactPage = ({ actionData }: Route.ComponentProps) => {
               </p>
             </div>
 
-            <div className="space-y-4 rounded-3xl border border-(--border-glass) bg-glass-blue/70 px-6 py-6 text-light-gray backdrop-blur">
+            <div className="space-y-4 rounded-2xl border border-(--border-glass) bg-glass-blue/70 px-4 py-6 text-light-gray backdrop-blur">
               <div className="flex items-center gap-3 text-sm md:text-base">
                 <FiMail className="text-light-yellow text-xl" />
                 <a
@@ -84,11 +84,11 @@ const ContactPage = ({ actionData }: Route.ComponentProps) => {
 
           <div className="relative">
             <div className="absolute -inset-4 rounded-4xl border border-(--border-glass) bg-glass-blue/70 opacity-80 blur-xl" />
-            <div className="relative rounded-[28px] border border-(--border-glass) bg-glass-gray px-6 py-8 shadow-xl backdrop-blur">
+            <div className="relative rounded-2xl border border-(--border-glass) bg-glass-gray px-4 py-8 shadow-xl backdrop-blur">
               <form
                 action="https://formspree.io/f/mblqjpnr"
                 method="post"
-                className="space-y-6"
+                className="space-y-6 px-4 sm:px-0"
                 onSubmit={(e) => {
                   const form = e.currentTarget;
                   setTimeout(() => {

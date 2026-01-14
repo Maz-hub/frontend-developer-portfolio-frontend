@@ -48,13 +48,13 @@ const BlogPage = ({ loaderData }: Route.ComponentProps) => {
   const currentPosts = filteredPosts.slice(indexOfFirst, indexofLast);
 
   return (
-    <div className="relative isolate overflow-hidden bg-linear-to-b from-primary-blue-dark via-[#0b1423] to-[#04070d]">
+    <div className="md:relative md:isolate md:overflow-hidden md:bg-linear-to-b md:from-primary-blue-dark via-[#0b1423] md:to-[#04070d]">
       <div className="pointer-events-none absolute -top-40 -right-48 h-112 w-md rounded-full bg-glass-yellow opacity-55 blur-3xl" />
       <div className="pointer-events-none absolute -bottom-72 -left-40 h-128 w-lg rounded-full bg-glass-green opacity-55 blur-3xl" />
       <div className="pointer-events-none absolute top-1/3 left-1/2 h-72 w-72 -translate-x-1/2 rounded-full bg-glass-blue opacity-40 blur-3xl" />
 
-      <div className="relative z-10 mx-auto flex w-full max-w-6xl flex-col gap-12 px-6 py-24 lg:px-10">
-        <section className="space-y-6">
+      <div className="relative z-10 mx-auto flex w-full max-w-6xl flex-col gap-12 px-0 py-24 sm:px-6 lg:px-10">
+        <section className="space-y-6 px-4 sm:px-0">
           <span className="inline-flex items-center gap-2 rounded-full bg-glass-green px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.35em] text-light-gray">
             <span className="h-2 w-2 rounded-full bg-accent-green" />
             Blog
@@ -80,7 +80,7 @@ const BlogPage = ({ loaderData }: Route.ComponentProps) => {
 
         <section className="space-y-10">
           {currentPosts.length === 0 ? (
-            <p className="rounded-3xl border border-(--border-glass) bg-glass-gray/70 px-6 py-10 text-center text-light-gray backdrop-blur">
+            <p className="mx-4 rounded-3xl border border-(--border-glass) bg-glass-gray/70 px-6 py-10 text-center text-light-gray backdrop-blur sm:mx-0">
               No Posts Found
             </p>
           ) : (

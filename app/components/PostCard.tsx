@@ -3,7 +3,7 @@ import { Link } from "react-router";
 
 const PostCard = ({ post }: { post: Post }) => {
   return (
-    <article className="group relative flex h-full flex-col overflow-hidden rounded-[28px] border border-(--border-glass) bg-glass-gray/80 px-6 py-8 shadow-sm backdrop-blur transition hover:-translate-y-1 hover:shadow-lg sm:px-8 mb-6">
+    <article className="group relative flex h-full flex-col overflow-hidden rounded-[28px] border border-(--border-glass) bg-glass-gray/80 px-4 py-8 shadow-sm backdrop-blur transition hover:-translate-y-1 hover:shadow-lg sm:px-8 mb-6">
       <div className="pointer-events-none absolute -top-20 -right-24 h-40 w-40 rounded-full bg-glass-blue opacity-40 blur-2xl transition group-hover:opacity-60" />
       <div className="pointer-events-none absolute -bottom-24 -left-16 h-32 w-32 rounded-full bg-glass-green opacity-40 blur-2xl transition group-hover:opacity-60" />
 

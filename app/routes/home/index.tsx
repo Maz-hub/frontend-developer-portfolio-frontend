@@ -89,7 +89,7 @@ const HomePage = ({ loaderData }: Route.ComponentProps) => {
       description: "Technologies I’m exploring to grow further.",
       items: [
         "TypeScript",
-        "TanStack",
+        "Django",
         "Testing",
         "Performance Optimization",
         "Advanced API Handling",
@@ -98,16 +98,16 @@ const HomePage = ({ loaderData }: Route.ComponentProps) => {
   ];
 
   return (
-    <div className="relative isolate overflow-hidden bg-linear-to-b from-primary-blue-dark via-[#0b1423] to-[#04070d]">
-      <div className="pointer-events-none absolute -top-48 -left-48 h-120 w-120 rounded-full bg-glass-green opacity-60 blur-3xl" />
-      <div className="pointer-events-none absolute -bottom-80 -right-56 h-136 w-136 rounded-full bg-glass-yellow opacity-55 blur-3xl" />
-      <div className="pointer-events-none absolute top-1/3 left-1/2 h-72 w-72 -translate-x-1/2 rounded-full bg-glass-blue opacity-40 blur-3xl" />
+    <div className="relative isolate overflow-hidden bg-primary-blue-dark md:bg-linear-to-b md:from-primary-blue-dark md:via-[#0b1423] md:to-[#04070d]">
+      <div className="pointer-events-none absolute -top-48 -left-48 hidden h-120 w-120 rounded-full bg-glass-green opacity-60 blur-3xl md:block" />
+      <div className="pointer-events-none absolute -bottom-80 -right-56 hidden h-136 w-136 rounded-full bg-glass-yellow opacity-55 blur-3xl md:block" />
+      <div className="pointer-events-none absolute top-1/3 left-1/2 hidden h-72 w-72 -translate-x-1/2 rounded-full bg-glass-blue opacity-40 blur-3xl md:block" />
 
-      <div className="relative z-10 mx-auto flex w-full max-w-6xl flex-col gap-16 px-6 py-24 lg:px-10">
+      <div className="relative z-10 mx-auto flex w-full max-w-6xl flex-col gap-16 px-0 py-16 sm:px-6 md:py-24 lg:px-10">
         <FeaturedProjects
           projects={projects}
           count={4}
-          className="rounded-4xl border border-(--border-glass) bg-glass-gray px-6 py-10 shadow-lg backdrop-blur md:px-10"
+          className="py-10 md:rounded-4xl md:border md:border-(--border-glass) md:bg-glass-gray md:px-10 md:shadow-lg md:backdrop-blur"
         />
 
         <section className="space-y-8">
@@ -115,7 +115,7 @@ const HomePage = ({ loaderData }: Route.ComponentProps) => {
             <h2 className="text-3xl font-bold text-pale-yellow md:text-4xl">
               Tech I work with
             </h2>
-            <p className="text-medium-gray text-sm md:text-base">
+            <p className="text-medium-gray text-lg leading-relaxed md:text-base">
               My go-to languages, tools, and what I’m learning next.
             </p>
           </div>
@@ -123,19 +123,19 @@ const HomePage = ({ loaderData }: Route.ComponentProps) => {
             {techSections.map((section) => (
               <div
                 key={section.title}
-                className="rounded-3xl border border-(--border-glass) bg-glass-gray/80 px-6 py-7 shadow-sm backdrop-blur transition  hover:shadow-md"
+                className="rounded-3xl border border-(--border-glass) bg-glass-gray/80 px-5 py-7 md:px-6 shadow-sm backdrop-blur transition  hover:shadow-md"
               >
                 <h3 className="text-lg font-semibold text-light-yellow">
                   {section.title}
                 </h3>
-                <p className="mt-1 text-sm text-medium-gray">
+                <p className="mt-1 text-lg leading-relaxed text-medium-gray md:text-sm">
                   {section.description}
                 </p>
                 <div className="mt-4 flex flex-wrap gap-2">
                   {section.items.map((item) => (
                     <span
                       key={item}
-                      className="rounded-full border border-gray-300 px-3 py-1 text-xs  uppercase tracking-[0.2em] text-gray-400"
+                      className="rounded-full border border-gray-300 px-3 py-1 uppercase tracking-[0.2em] text-gray-400 text-xs"
                     >
                       {item}
                     </span>

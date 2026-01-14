@@ -59,13 +59,13 @@ const ProjectsPage = ({ loaderData }: Route.ComponentProps) => {
   const currentProjects = filteredProjects.slice(indexOfFirst, indexOfLast);
 
   return (
-    <div className="relative isolate overflow-hidden bg-linear-to-b from-primary-blue-dark via-[#0b1423] to-[#04070d]">
+    <div className="md:relative md:isolate overflow-hidden md:bg-linear-to-b md:from-primary-blue-dark md:via-[#0b1423] md:to-[#04070d]">
       <div className="pointer-events-none absolute -top-40 -left-40 h-72 w-72 rounded-full bg-glass-green opacity-60 blur-3xl" />
       <div className="pointer-events-none absolute top-1/3 -right-32 h-96 w-96 rounded-full bg-glass-yellow opacity-50 blur-3xl" />
       <div className="pointer-events-none absolute -bottom-56 left-1/2 h-112 w-md -translate-x-1/2 rounded-full bg-glass-blue opacity-40 blur-3xl" />
 
-      <div className="relative z-10 mx-auto flex w-full max-w-[1200px] flex-col gap-16 px-6 py-24 lg:px-10">
-        <section className="space-y-6">
+      <div className="relative z-10 mx-auto flex w-full max-w-[1200px] flex-col gap-16 px-0 py-24 sm:px-6 lg:px-10">
+        <section className="space-y-6 px-4 sm:px-0">
           <span className="inline-flex items-center gap-2 rounded-full bg-glass-green px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.35em] text-light-gray">
             <span className="h-2 w-2 rounded-full bg-accent-green" />
             Projects
@@ -78,7 +78,7 @@ const ProjectsPage = ({ loaderData }: Route.ComponentProps) => {
         </section>
 
         <section className="space-y-10">
-          <div className="rounded-3xl border border-(--border-glass) bg-glass-gray px-6 py-8 backdrop-blur md:px-10 md:py-12">
+          <div className="py-8 md:rounded-3xl md:border md:border-(--border-glass) md:bg-glass-gray md:px-10 md:py-12 md:backdrop-blur">
             <div className="flex flex-wrap gap-3">
               {categories.map((category) => (
                 <button

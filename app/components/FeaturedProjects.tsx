@@ -16,12 +16,12 @@ const FeaturedProjects = ({
   if (projects.length === 0) return null;
 
   return (
-    <section className={`space-y-10 ${className ?? ""}`}>
+    <section className={`space-y-10 px-0 ${className ?? ""}`}>
       <div className="text-center space-y-3">
         <h2 className="text-3xl font-bold text-pale-yellow md:text-4xl">
           Featured Projects
         </h2>
-        <p className="text-medium-gray text-sm md:text-base">
+        <p className="text-medium-gray md:text-base">
           A quick look at recent work across frontend builds and full-stack
           applications.
         </p>
@@ -31,13 +31,13 @@ const FeaturedProjects = ({
         {projects.map((project) => (
           <article
             key={project.id}
-            className="flex flex-col gap-6 rounded-3xl border border-(--border-glass) bg-primary-blue-dark/40 p-6 shadow-lg backdrop-blur transition  md:flex-row md:items-stretch"
+            className="flex flex-col gap-6 py-6 transition md:flex-row md:items-stretch md:gap-6 md:rounded-3xl md:border md:border-(--border-glass) md:bg-primary-blue-dark/40 md:p-6 md:shadow-lg md:backdrop-blur"
           >
-            <div className="overflow-hidden rounded-2xl border border-(--border-glass) bg-glass-gray md:w-1/3">
+            <div className="w-full md:overflow-hidden md:rounded-2xl md:border md:border-(--border-glass) md:bg-glass-gray md:w-1/3">
               <img
                 src={project.image}
                 alt={project.title}
-                className="h-full w-full object-cover transition duration-500 md:hover:scale-[1.03]"
+                className="w-full h-52 object-cover transition sm:h-64 md:h-full md:hover:scale-[1.03]"
               />
             </div>
 
@@ -51,7 +51,7 @@ const FeaturedProjects = ({
                 </p>
               </header>
 
-              <p className="text-base leading-relaxed text-light-gray/90">
+              <p className="text-lg leading-relaxed text-light-gray/90 md:text-base">
                 {project.description}
               </p>
 
@@ -68,13 +68,13 @@ const FeaturedProjects = ({
                 </div>
               ) : null}
 
-              <div className="flex flex-wrap gap-3 pt-2 mt-5">
+              <div className="flex flex-col gap-3 pt-2 mt-5 sm:flex-row sm:flex-wrap sm:justify-center md:justify-start">
                 {project.url ? (
                   <a
                     href={project.url}
                     target="_blank"
                     rel="noreferrer"
-                    className="btn-primary inline-flex items-center gap-2 px-6 py-3"
+                    className="btn-primary inline-flex w-full items-center justify-center gap-2 px-6 py-3 md:w-auto md:justify-start"
                   >
                     <TfiWorld size={24} />
                     Live project
@@ -86,7 +86,7 @@ const FeaturedProjects = ({
                     href={project.repo}
                     target="_blank"
                     rel="noreferrer"
-                    className="btn-secondary inline-flex items-center gap-2 px-6 py-3"
+                    className="btn-secondary inline-flex w-full items-center justify-center gap-2 px-6 py-3 md:w-auto md:justify-start"
                   >
                     <FaGithub size={24} />
                     View code

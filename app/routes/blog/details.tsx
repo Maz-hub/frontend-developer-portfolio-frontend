@@ -43,15 +43,15 @@ const BlogPostDetailsPage = ({ loaderData }: BlogPostDetailsPageProps) => {
   const { post } = loaderData;
 
   return (
-    <div className="relative isolate overflow-hidden bg-linear-to-b from-primary-blue-dark via-[#0b1423] to-[#04070d]">
+    <div className="relative isolate overflow-hidden bg-primary-blue-dark md:bg-linear-to-b md:from-primary-blue-dark md:via-[#0b1423] md:to-[#04070d]">
       <div className="pointer-events-none absolute -top-40 -left-40 h-104 w-104 rounded-full bg-glass-green opacity-60 blur-3xl" />
       <div className="pointer-events-none absolute -bottom-72 -right-48 h-128 w-lg rounded-full bg-glass-yellow opacity-55 blur-3xl" />
       <div className="pointer-events-none absolute top-1/3 left-1/2 h-72 w-72 -translate-x-1/2 rounded-full bg-glass-blue opacity-40 blur-3xl" />
 
       <BsJournalCode className="pointer-events-none absolute right-10 bottom-10 text-[100px] text-light-gray/5" />
 
-      <div className="relative z-10 mx-auto flex w-full max-w-5xl flex-col gap-14 px-6 py-24 lg:px-10">
-        <header className="space-y-6">
+      <div className="relative z-10 mx-auto flex w-full max-w-5xl flex-col gap-14 px-0 py-24 sm:px-6 lg:px-10">
+        <header className="space-y-6 px-4 sm:px-0">
           <span className="inline-flex items-center gap-2 rounded-full bg-glass-green px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.35em] text-light-gray">
             <span className="h-2 w-2 rounded-full bg-accent-green" />
             Blog
@@ -66,7 +66,7 @@ const BlogPostDetailsPage = ({ loaderData }: BlogPostDetailsPageProps) => {
           </div>
         </header>
 
-        <article className="relative rounded-4xl border border-(--border-glass) bg-glass-gray px-6 py-10 shadow-xl backdrop-blur md:px-10">
+        <article className="relative px-4 py-10 md:rounded-4xl md:border md:border-(--border-glass) md:bg-glass-gray md:px-10 md:shadow-xl md:backdrop-blur">
           <div className="pointer-events-none absolute -top-24 -right-32 h-52 w-52 rounded-full bg-glass-blue opacity-40 blur-3xl" />
           <div className="pointer-events-none absolute -bottom-40 -left-24 h-60 w-60 rounded-full bg-glass-green opacity-35 blur-3xl" />
 
@@ -83,7 +83,7 @@ const BlogPostDetailsPage = ({ loaderData }: BlogPostDetailsPageProps) => {
           </div>
         </article>
 
-        <div className="flex flex-wrap items-center gap-4">
+        <div className="flex flex-wrap items-center gap-4 px-4 sm:px-0">
           <Link
             to="/blog"
             className="inline-flex items-center gap-2 rounded-full border border-light-yellow/40 px-5 py-3 text-sm font-semibold text-light-yellow transition hover:border-light-yellow hover:text-pale-yellow"

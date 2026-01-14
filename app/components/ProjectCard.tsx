@@ -6,9 +6,9 @@ const ProjectCard = ({ project }: { project: Project }) => {
   const formattedDate = new Date(project.date).toLocaleDateString();
 
   return (
-    <article className="flex h-full flex-col overflow-hidden rounded-3xl border border-(--border-glass) bg-primary-blue-dark/40 shadow-lg backdrop-blur transition hover:-translate-y-1 hover:shadow-xl">
+    <article className="flex h-full flex-col overflow-hidden border border-(--border-glass) bg-primary-blue-dark/40 shadow-lg backdrop-blur transition hover:-translate-y-1 hover:shadow-xl">
       {/* Image on top */}
-      <div className="overflow-hidden rounded-b-none rounded-3xl border-b border-(--border-glass) bg-glass-gray">
+      <div className="overflow-hidden border-b border-(--border-glass) bg-glass-gray">
         <img
           src={project.image}
           alt={project.title}
@@ -17,7 +17,7 @@ const ProjectCard = ({ project }: { project: Project }) => {
       </div>
 
       {/* Content */}
-      <div className="flex flex-1 flex-col gap-4 p-6 text-light-gray">
+      <div className="flex flex-1 flex-col gap-4 px-4 py-6 text-light-gray">
         {/* Title + date */}
         <header className="space-y-2">
           <h3 className="text-2xl font-semibold text-pale-yellow">
