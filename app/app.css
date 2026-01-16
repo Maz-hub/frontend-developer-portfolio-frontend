@@ -43,9 +43,10 @@
   /* Pale yellow for text in dark mode */
 }
 
+/*
 html,
 body {
-  /* Custom colors for background */
+
   @apply bg-background-light dark:bg-background-dark;
   @apply text-text-light dark:text-text-dark;
 
@@ -53,6 +54,24 @@ body {
     color-scheme: dark;
   }
 }
+*/
+
+@layer base {
+
+  html,
+  body {
+    min-height: 100%;
+    background-color: var(--color-background-dark);
+    color: var(--color-text-dark);
+    margin: 0;
+  }
+
+  #root {
+    min-height: 100dvh;
+  }
+}
+
+
 
 @layer utilities {
   .perspective {
