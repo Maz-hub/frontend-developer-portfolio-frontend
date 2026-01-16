@@ -26,32 +26,32 @@ const AboutPage = () => {
     {
       title: "ctrl.z.my.life_",
       description: [
-        "My path into tech hasn’t been a straight one — it’s been shaped by curiosity, creativity, and a lifelong desire to keep learning. The constant thread through all my professional experiences has been the drive to grow and adapt.",
-        "Before discovering code, I studied Hospitality & Tourism and worked in diverse settings — from hotels and restaurants to administrative roles across different industries. Over the years, I’ve seen how patience, empathy, and small details can completely change how people experience something — a lesson that now guides how I think about building for the web.",
-        "Each step, even the detours, has taught me that growth doesn’t always happen in a straight line — sometimes it’s the quiet shifts, the small learnings, that prepare you for the next big step.",
+        "My path into tech hasn’t been a straight one. It’s been shaped by curiosity, creativity, and a lifelong desire to keep learning. The constant thread through all my professional experiences has been the drive to grow and adapt.",
+        "Before discovering code, I studied Hospitality and Tourism and worked in diverse settings, from hotels and restaurants to administrative roles across different industries. Over the years, I have seen how patience, empathy, and attention to small details can completely change how people experience something. This lesson now guides how I think about building for the web.",
+        "Each step, even the detours, has taught me that growth doesn’t always happen in a straight line. Sometimes it’s the quiet shifts, the small learnings, that prepare you for the next big step.",
       ],
     },
     {
       title: "from.curiosity_to_code_",
       description: [
-        "I first became curious about web development more than fifteen years ago while experimenting with WordPress, building small freelance websites for local clients - including a hotel-restaurant and a few small businesses. I loved seeing ideas come to life online, but I often reached the limits of what I could customize without understanding the code behind it.",
+        "I first became curious about web development more than fifteen years ago while experimenting with WordPress, building small freelance websites for local clients, including a hotel-restaurant and a few small businesses. I loved seeing ideas come to life online, but I often reached the limits of what I could customize without understanding the code behind it.",
         "In 2021, I decided to go deeper and began learning through freeCodeCamp, where I earned my Responsive Web Design certification. That experience reignited my passion for creating and sparked a desire to understand how the web works from front to back.",
-        "In 2024, I joined herHack, the largest female-led hackathon in Switzerland, where our team proudly won 2nd place. Working under pressure reminded me how creativity and collaboration can bring bold ideas to life.",
+        "In 2024, I joined #herHack, the largest female-led hackathon in Switzerland, where our team proudly won 2nd place. Working under pressure reminded me how creativity and collaboration can bring bold ideas to life.",
         "The following year, I completed Harvard’s CS50: Computer Science for Web Programming, a professional certification that challenged me to build full-stack projects and connect the dots between logic, design, and user experience.",
-        "Each of these experiences has shaped not only my technical foundation but also the way I approach learning - with persistence, curiosity, and a genuine excitement for building.",
+        "Each of these experiences has shaped not only my technical foundation but also the way I approach learning: with persistence, curiosity, and a genuine excitement for building.",
       ],
     },
     {
       title: "debugging.with.grace_or.not_",
       description: [
         "Debugging and I have a complicated relationship. There were times when the console screamed at me, and one missing semicolon nearly broke my spirit - but never my curiosity.",
-        "Every bug has felt like an invitation to dig deeper and understand a little more. Frustrating? Absolutely. But walking away was never an option - there’s always that moment when the problem finally clicks, and it’s worth every bit of the struggle.",
+        "Every bug has felt like an invitation to dig deeper and understand a little more. Frustrating? Absolutely. But walking away was never an option. There’s always that moment when the problem finally clicks, and it’s worth every bit of the struggle.",
       ],
     },
     {
       title: "growth.purpose_",
       description: [
-        "For me, coding isn’t just a skill - it’s a way of thinking and expressing ideas with structure and care.",
+        "For me, coding isn’t just a skill, it’s a way of thinking and expressing ideas with structure and care.",
         "Each project I take on is a chance to improve my process, keep learning, and grow through real challenges and collaboration.",
       ],
     },
@@ -61,7 +61,7 @@ const AboutPage = () => {
     {
       title: "Details that matter",
       description:
-        "My background in people-focused work taught me that small choices - tone, timing, layout - can completely change how something feels to others.",
+        "My background in people-focused work taught me that small choices, tone, timing, layout can completely change how something feels to others.",
     },
     {
       title: "Curiosity-led problem solving",
@@ -71,7 +71,7 @@ const AboutPage = () => {
     {
       title: "Collective momentum, Hackathon",
       description:
-        "Team projects and hackathons remind me how much creativity grows when people build together - it’s motivating and pushes me to learn faster.",
+        "Team projects and hackathons remind me how much creativity grows when people build together. It’s motivating and pushes me to learn faster.",
     },
   ];
 
@@ -95,7 +95,7 @@ const AboutPage = () => {
       issuer: "Bern, Switzerland",
       year: "2024",
       description:
-        "Developed a sustainable tech concept for SBB with a diverse all-women team - collaboration, creativity, and impact in action.",
+        "Developed a sustainable tech concept for SBB with a diverse all-women team. Collaboration, creativity, and impact in action.",
     },
     {
       title: "CS50: Computer Science for Web Programming",
@@ -155,7 +155,7 @@ const AboutPage = () => {
                 into clean, user-friendly web experiences.
               </h1>
               <p className="text-lg leading-relaxed text-light-gray">
-                Hey, I&apos;m Marianna — friends call me Maz. I&apos;m a
+                Hey, I&apos;m Marianna - friends call me Maz. I&apos;m a
                 self-taught frontend developer based in Switzerland,
                 continuously learning through practice, hands-on projects, and
                 community challenges that help me grow.
@@ -210,7 +210,7 @@ const AboutPage = () => {
               The journey so far
             </h2>
             <p className="text-medium-gray">
-              Every chapter adds a tool to my kit - how to organize, listen,
+              Every chapter adds a tool to my kit: how to organize, listen,
               adapt, and now, how to build. I’ve learned that growth often
               begins when curiosity meets persistence.
             </p>
