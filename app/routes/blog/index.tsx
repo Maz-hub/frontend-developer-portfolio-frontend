@@ -8,8 +8,9 @@ import PostFilter from "~/components/PostFilter";
 export async function loader({
   request,
 }: Route.LoaderArgs): Promise<{ posts: Post[] }> {
-  const res = await fetch(`${import.meta.env.VITE_API_URL}/posts?
-    populate=image&sort=date:desc`);
+  const res = await fetch(
+    `${import.meta.env.VITE_API_URL}/posts?populate[image][fields][0]=url&fields[0]=title&fields[1]=slug&fields[2]=excerpt&fields[3]=date&sort=date:desc&pagination[pageSize]=100`
+  );
 
   if (!res.ok) throw new Error("Failed to fetch data");
 
@@ -21,7 +22,7 @@ export async function loader({
     slug: item.slug,
     excerpt: item.excerpt,
     date: item.date,
-    body: item.body,
+    body: item.body || "",
     image: item.image?.url ? `${item.image.url}` : "/images/no-image.png",
   }));
 
