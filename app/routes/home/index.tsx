@@ -19,7 +19,7 @@ export async function loader({
   request,
 }: Route.LoaderArgs): Promise<{ projects: Project[] }> {
   const res = await fetch(
-    `${import.meta.env.VITE_API_URL}/projects?filters[featured][$eq]=true&populate=*`
+    `${import.meta.env.VITE_API_URL}/projects?filters[featured][$eq]=true&populate[image][fields][0]=url&fields[0]=title&fields[1]=description&fields[2]=url&fields[3]=repo&fields[4]=date&fields[5]=category&fields[6]=featured&populate[tech][fields][0]=name`
   );
   const json: StrapiResponse<StrapiProject> = await res.json();
 
