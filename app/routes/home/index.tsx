@@ -3,6 +3,7 @@ import FeaturedProjects from "~/components/FeaturedProjects";
 import type { Project, StrapiProject, StrapiResponse } from "~/types";
 import AboutPreview from "~/components/AboutPreview";
 import { Link } from "react-router"; // keep whatever you use in this project
+import Loading from "~/components/Loading";
 
 export function meta({}: Route.MetaArgs) {
   return [
@@ -38,6 +39,10 @@ export async function loader({
   }));
 
   return { projects };
+}
+
+export function HydrateFallback() {
+  return <Loading />;
 }
 
 const HomePage = ({ loaderData }: Route.ComponentProps) => {

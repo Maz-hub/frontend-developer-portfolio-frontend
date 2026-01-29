@@ -4,6 +4,7 @@ import type { Route } from "./+types/index";
 import type { Project, StrapiProject, StrapiResponse } from "~/types";
 import Pagination from "~/components/Pagination";
 import { AnimatePresence, motion } from "framer-motion";
+import Loading from "~/components/Loading";
 
 export async function loader({
   request,
@@ -28,6 +29,10 @@ export async function loader({
   }));
 
   return { projects };
+}
+
+export function HydrateFallback() {
+  return <Loading />;
 }
 
 const ProjectsPage = ({ loaderData }: Route.ComponentProps) => {
