@@ -26,7 +26,7 @@ const Hero = () => {
                     className="absolute inset-0 w-full h-full rounded-full object-cover backface-hidden"
                   />
                   <img
-                    src="./images/maz_profile_photo_mountains2.jpeg"
+                    src="./images/maz_profile_photo_mountains2.webp"
                     alt="Marianna in the mountains"
                     className="absolute inset-0 w-full h-full rounded-full object-cover rotate-y-180 backface-hidden"
                   />
