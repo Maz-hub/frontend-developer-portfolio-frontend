@@ -52,7 +52,7 @@ const AboutPreview = () => {
           <div className="absolute -inset-2 hidden rounded-[26px] border border-(--border-glass) bg-glass-yellow/30 opacity-0 blur-lg transition duration-500 group-hover:opacity-100 md:block" />
           <div className="relative aspect-3/4 overflow-hidden rounded-[22px] md:border md:border-(--border-glass)">
             <img
-              src="/images/maz_profile_photo_mountains_1.jpeg"
+              src="/images/maz_profile_photo_mountains_1.webp"
               alt="Marianna Mirabile portrait"
               className="h-full w-full object-cover transition duration-500 group-hover:scale-[1.03]"
             />

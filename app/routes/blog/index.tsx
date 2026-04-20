@@ -12,11 +12,13 @@ export async function loader({
     `${import.meta.env.VITE_API_URL}/posts?populate[image][fields][0]=url&fields[0]=title&fields[1]=slug&fields[2]=excerpt&fields[3]=date&sort=date:desc&pagination[pageSize]=100`
   );
 
-  if (!res.ok) throw new Error("Failed to fetch data");
+  if (!res.ok) {
+    return { posts: [] };
+  }
 
   const json: StrapiResponse<StrapiPost> = await res.json();
 
-  const posts = json.data.map((item) => ({
+  const posts = (json.data ?? []).map((item) => ({
     id: item.id,
     title: item.title,
     slug: item.slug,

@@ -21,7 +21,7 @@ const Hero = () => {
               <div className="absolute inset-0 perspective">
                 <div className="relative w-full h-full transition-transform duration-800 ease-[cubic-bezier(.2,.8,.2,1)] transform-gpu will-change-transform transform-style-preserve-3d group-hover:rotate-y-180">
                   <img
-                    src="./images/maz_profile_photo.jpeg"
+                    src="./images/maz_profile_photo.webp"
                     alt="Marianna Mirabile"
                     className="absolute inset-0 w-full h-full rounded-full object-cover backface-hidden"
                   />

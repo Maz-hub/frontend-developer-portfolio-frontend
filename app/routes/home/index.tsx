@@ -22,9 +22,13 @@ export async function loader({
   const res = await fetch(
     `${import.meta.env.VITE_API_URL}/projects?filters[featured][$eq]=true&populate=*`
   );
+  if (!res.ok) {
+    return { projects: [] };
+  }
+
   const json: StrapiResponse<StrapiProject> = await res.json();
 
-  const projects: Project[] = json.data.map((item) => ({
+  const projects: Project[] = (json.data ?? []).map((item) => ({
     id: item.id,
     documentId: item.documentId,
     title: item.title,

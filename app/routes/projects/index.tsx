@@ -12,9 +12,14 @@ export async function loader({
   const res = await fetch(
     `${import.meta.env.VITE_API_URL}/projects?populate=*`
   );
+
+  if (!res.ok) {
+    return { projects: [] };
+  }
+
   const json: StrapiResponse<StrapiProject> = await res.json();
 
-  const projects = json.data.map((item) => ({
+  const projects = (json.data ?? []).map((item) => ({
     id: item.id,
     title: item.title,
     documentId: item.documentId,

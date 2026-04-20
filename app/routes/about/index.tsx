@@ -123,15 +123,15 @@ const AboutPage = () => {
 
   const herHackImages = [
     {
-      src: "/images/herhack-2024_1.jpeg",
+      src: "/images/herhack-2024_1.webp",
       alt: "herHack 2024 photo 1",
     },
     {
-      src: "/images/herhack-2024_2.jpeg",
+      src: "/images/herhack-2024_2.webp",
       alt: "herHack 2024 photo 2",
     },
     {
-      src: "/images/herhack-2024_3.jpeg",
+      src: "/images/herhack-2024_3.webp",
       alt: "herHack 2024 photo 3",
     },
   ];
@@ -167,7 +167,7 @@ const AboutPage = () => {
             <div className="absolute -inset-6 rounded-2xl border border-(--border-glass) bg-glass-blue opacity-70 blur-lg" />
             <div className="relative overflow-hidden rounded-4xl border border-(--border-glass) bg-glass-blue backdrop-blur-lg">
               <img
-                src="/images/maz_bio.jpeg"
+                src="/images/maz_bio.webp"
                 alt="Marianna"
                 className="h-full w-full object-cover"
               />
