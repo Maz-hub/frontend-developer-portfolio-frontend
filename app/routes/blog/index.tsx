@@ -5,6 +5,12 @@ import PostCard from "~/components/PostCard";
 import Pagination from "~/components/Pagination";
 import PostFilter from "~/components/PostFilter";
 
+export function headers() {
+  return {
+    "Cache-Control": "max-age=60, stale-while-revalidate=300",
+  };
+}
+
 export async function loader({
   request,
 }: Route.LoaderArgs): Promise<{ posts: Post[] }> {

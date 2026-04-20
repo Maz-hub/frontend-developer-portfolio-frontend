@@ -6,6 +6,12 @@ import Pagination from "~/components/Pagination";
 import { AnimatePresence, motion } from "framer-motion";
 import Loading from "~/components/Loading";
 
+export function headers() {
+  return {
+    "Cache-Control": "max-age=60, stale-while-revalidate=300",
+  };
+}
+
 export async function loader({
   request,
 }: Route.LoaderArgs): Promise<{ projects: Project[] }> {
