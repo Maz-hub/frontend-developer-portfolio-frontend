@@ -38,12 +38,12 @@ const Hero = () => {
           {/* Right: Text */}
           <div className="text-justify md:text-left space-y-4 text-medium-gray text-lg leading-relaxed">
             <p>
-              I'm a Frontend Developer with hands-on experience building
-              projects while learning React and modern web tools.
+              Developer based in Switzerland with hands-on experience building
+              projects that make people's work easier.
             </p>
             <p>
-              I love solving challenges, exploring new technologies, and turning
-              ideas into functional, meaningful websites.
+              I bring product thinking to everything I build - I don't just
+              write code, I look for better ways to solve real problems.
             </p>
 
             <div className="flex flex-wrap gap-4 mt-6 justify-center md:justify-start">
