@@ -39,12 +39,6 @@ const AboutPreview = () => {
             >
               About me
             </Link>
-            <Link
-              to="/blog"
-              className="btn-secondary w-full text-center md:w-auto"
-            >
-              Visit the blog
-            </Link>
           </div>
         </div>
 
