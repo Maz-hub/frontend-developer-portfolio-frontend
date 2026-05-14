@@ -56,8 +56,8 @@ const ContactPage = ({ actionData }: Route.ComponentProps) => {
                 Contact Me
               </h2>
               <p className="text-medium-gray text-lg leading-relaxed">
-                Open to new opportunities and conversations around web
-                development.
+                Open to new opportunities in web development, digital project
+                coordination, and digital operations in Switzerland.
               </p>
             </div>
 
@@ -65,7 +65,7 @@ const ContactPage = ({ actionData }: Route.ComponentProps) => {
               <div className="flex items-center gap-3 text-sm md:text-base">
                 <FiMail className="text-light-yellow text-xl" />
                 <a
-                  href="mailto:hi@mariannamirabile.dev"
+                  href="mailto:mazoolander@gmail.com"
                   className="hover:text-light-yellow transition"
                 >
                   mazoolander@gmail.com
