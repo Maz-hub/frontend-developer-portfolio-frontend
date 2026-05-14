@@ -36,7 +36,7 @@ export const projects: Project[] = [
     documentId: "aqua-inventory-hub",
     title: "Aqua Inventory Hub",
     description:
-      "A full-stack inventory management system built for World Aquatics, replacing manual Excel tracking for promotional gifts and branded apparel across 70+ staff worldwide. Self-initiated project featuring role-based access, audit trails, and EU customs compliance fields.",
+      "Full-stack internal web application built for World Aquatics to replace manual spreadsheet-based inventory tracking. Features role-based access (admin and staff), a full audit trail for every stock movement, category-based inventory modules, and a dedicated admin panel for managing products, stock adjustments, and transaction history",
     image: "/images/aqua-inventory-hub.png",
     url: "",
     repo: "https://github.com/Maz-hub/aqua-inventory-hub",
