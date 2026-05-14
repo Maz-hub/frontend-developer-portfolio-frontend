@@ -333,7 +333,7 @@ export const projects: Project[] = [
     documentId: "aqua-inventory-hub",
     title: "Aqua Inventory Hub",
     description:
-      "A full-stack internal web application built for World Aquatics to replace manual spreadsheet-based inventory tracking. Features role-based access (admin and staff), a full audit trail for every stock movement, category-based inventory modules, and a dedicated admin panel for managing products, stock adjustments, and transaction history.",
+      "Currently building a full-stack internal inventory management application for World Aquatics, replacing manual spreadsheet tracking across the organisation. Phase 1 (Gifts, Apparel and Executive Office modules) deploys June 2026. Built with Django REST Framework and React, deployed on Azure with role-based access, a full audit trail, and Microsoft SSO integration in progress.",
     image: "/images/aqua-inventory-hub.png",
     url: "",
     repo: "https://github.com/Maz-hub/aqua-inventory-hub",
