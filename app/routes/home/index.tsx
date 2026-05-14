@@ -1,6 +1,7 @@
 import type { Route } from "./+types/index";
 import FeaturedProjects from "~/components/FeaturedProjects";
-import type { Project, StrapiProject, StrapiResponse } from "~/types";
+import type { Project } from "~/types";
+import { projects as allProjects } from "~/data/projects";
 import AboutPreview from "~/components/AboutPreview";
 import { Link } from "react-router"; // keep whatever you use in this project
 import Loading from "~/components/Loading";
@@ -16,32 +17,8 @@ export function meta({}: Route.MetaArgs) {
   ];
 }
 
-export async function loader({
-  request,
-}: Route.LoaderArgs): Promise<{ projects: Project[] }> {
-  const res = await fetch(
-    `${import.meta.env.VITE_API_URL}/projects?filters[featured][$eq]=true&populate=*`
-  );
-  if (!res.ok) {
-    return { projects: [] };
-  }
-
-  const json: StrapiResponse<StrapiProject> = await res.json();
-
-  const projects: Project[] = (json.data ?? []).map((item) => ({
-    id: item.id,
-    documentId: item.documentId,
-    title: item.title,
-    description: item.description,
-    image: item.image?.url ? `${item.image.url}` : "/images/no-image.png",
-    url: item.url,
-    repo: item.repo,
-    date: item.date,
-    category: item.category,
-    featured: item.featured,
-    tech: item.tech ? item.tech.map((t) => t.name) : [],
-  }));
-
+export async function loader(): Promise<{ projects: Project[] }> {
+  const projects = allProjects.filter((p) => p.featured);
   return { projects };
 }
 
