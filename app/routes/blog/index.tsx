@@ -73,7 +73,7 @@ const BlogPage = ({ loaderData }: Route.ComponentProps) => {
               Build · Learn · Reflect
             </h1>
             <p className="text-medium-gray text-lg leading-relaxed">
-              My notes from my learning journey — experiments, takeaways, and
+              My notes from my learning journey: experiments, takeaways, and
               resources that keep me growing as a self-taught developer.
             </p>
           </div>

@@ -53,7 +53,7 @@ const ProjectCard = ({ project }: { project: Project }) => {
               target="_blank"
               rel="noopener noreferrer"
               className="btn-primary inline-flex items-center gap-2 px-6 py-3"
-              aria-label={`${project.title} — Live Demo`}
+              aria-label={`${project.title} -Live Demo`}
             >
               <TfiWorld size={24} />
               Live project
@@ -66,7 +66,7 @@ const ProjectCard = ({ project }: { project: Project }) => {
               target="_blank"
               rel="noopener noreferrer"
               className="btn-secondary inline-flex items-center gap-2 px-6 py-3"
-              aria-label={`${project.title} — GitHub Repository`}
+              aria-label={`${project.title} -GitHub Repository`}
             >
               <FaGithub size={24} />
               View code

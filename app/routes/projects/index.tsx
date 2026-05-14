@@ -1,7 +1,9 @@
 import { useState } from "react";
 import ProjectCard from "~/components/ProjectCard";
 import type { Route } from "./+types/index";
-import type { Project, StrapiProject, StrapiResponse } from "~/types";
+import type { Project } from "~/types";
+// Import static project data instead of fetching from Strapi
+import { projects as allProjects } from "~/data/projects";
 import Pagination from "~/components/Pagination";
 import { AnimatePresence, motion } from "framer-motion";
 import Loading from "~/components/Loading";
@@ -12,34 +14,9 @@ export function headers() {
   };
 }
 
-export async function loader({
-  request,
-}: Route.LoaderArgs): Promise<{ projects: Project[] }> {
-  const res = await fetch(
-    `${import.meta.env.VITE_API_URL}/projects?populate=*`
-  );
-
-  if (!res.ok) {
-    return { projects: [] };
-  }
-
-  const json: StrapiResponse<StrapiProject> = await res.json();
-
-  const projects = (json.data ?? []).map((item) => ({
-    id: item.id,
-    title: item.title,
-    documentId: item.documentId,
-    description: item.description,
-    image: item.image?.url ? `${item.image.url}` : "/images/no-image.png",
-    url: item.url,
-    repo: item.repo,
-    date: item.date,
-    category: item.category,
-    tech: item.tech ? item.tech.map((t) => t.name) : [],
-    featured: item.featured,
-  }));
-
-  return { projects };
+// Return all projects directly from static data - no API call needed
+export async function loader(): Promise<{ projects: Project[] }> {
+  return { projects: allProjects };
 }
 
 export function HydrateFallback() {

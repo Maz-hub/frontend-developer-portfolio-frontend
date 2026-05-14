@@ -23,7 +23,7 @@ const PostCard = ({ post }: { post: Post }) => {
           {post.excerpt}
         </p>
 
-        {/* BUTTON — STICKS TO THE BOTTOM */}
+        {/* BUTTON - STICKS TO THE BOTTOM */}
         <div className="mt-auto flex items-center gap-2 text-sm font-semibold text-light-yellow pt-4">
           <Link
             to={`/blog/${post.slug}`}

@@ -108,7 +108,7 @@ const AboutPage = () => {
     {
       title: "Aquatics Integrity Unit WordPress Refresh",
       issuer: "AQIU Integrity Unit",
-      year: "2024 — present",
+      year: "2024 - present",
       description:
         "10% mandate to re-structure content and modernise UX for aquaticsintegrity.com.",
     },
