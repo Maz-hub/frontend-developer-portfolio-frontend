@@ -10,15 +10,15 @@ const AboutPage = () => {
     },
     {
       label: "Current focus",
-      value: "React Frontend Engineering",
+      value: "Full Stack Development",
       description:
-        "Advancing in React for clean, performant, and scalable UIs.",
+        "Building with React on the frontend and Django on the backend.",
     },
     {
       label: "Latest milestone",
-      value: "Skyscanner · Forage",
+      value: "Aqua Inventory Hub",
       description:
-        "Built a React date picker using Skyscanner’s Backpack library.",
+        "Self-initiated full stack web app for World Aquatics, deploying June 2026.",
     },
   ];
 
@@ -26,33 +26,33 @@ const AboutPage = () => {
     {
       title: "ctrl.z.my.life_",
       description: [
-        "My path into tech hasn’t been a straight one. It’s been shaped by curiosity, creativity, and a lifelong desire to keep learning. The constant thread through all my professional experiences has been the drive to grow and adapt.",
-        "Before discovering code, I studied Hospitality and Tourism and worked in diverse settings, from hotels and restaurants to administrative roles across different industries. Over the years, I have seen how patience, empathy, and attention to small details can completely change how people experience something. This lesson now guides how I think about building for the web.",
-        "Each step, even the detours, has taught me that growth doesn’t always happen in a straight line. Sometimes it’s the quiet shifts, the small learnings, that prepare you for the next big step.",
+        "My path into tech has not been a straight line. But looking back, there has always been one constant: wherever I worked, I found something that could work better and created something to make it happen.",
+        "At a hotel and restaurant, I rebuilt their website from scratch using WordPress and Divi, collaborating with a photographer to make sure the design matched the quality of the place. Mobile optimisation was a priority from the start. At a Medical and Social Establishment, I developed several Excel tools for different departments. The main one, created for the Animation team in close collaboration with two department managers, is an application called DIMSO, used every day by staff to organise and track activities for each individual resident. It is still in use across two establishments. At World Aquatics, I took the initiative to design and deliver a full stack inventory management system in Django and React. When it deploys in June 2026, it will serve staff in both the Lausanne headquarters and the Budapest office.",
+        "Years of working across different industries and settings shaped how I think about building. I have worked with hotel guests, elderly residents, federation executives, and international staff across multiple countries. That range gives me something technical skills alone cannot: I understand who I am building for, and I build accordingly.",
       ],
     },
     {
       title: "from.curiosity_to_code_",
       description: [
-        "I first became curious about web development more than fifteen years ago while experimenting with WordPress, building small freelance websites for local clients, including a hotel-restaurant and a few small businesses. I loved seeing ideas come to life online, but I often reached the limits of what I could customize without understanding the code behind it.",
+        "I first became curious about web development more than fifteen years ago while experimenting with WordPress, building small freelance websites for local clients. I loved seeing ideas come to life online, but I often reached the limits of what I could customize without understanding the code behind it.",
         "In 2021, I decided to go deeper and began learning through freeCodeCamp, where I earned my Responsive Web Design certification. That experience reignited my passion for creating and sparked a desire to understand how the web works from front to back.",
         "In 2024, I joined #herHack, the largest female-led hackathon in Switzerland, where our team proudly won 2nd place. Working under pressure reminded me how creativity and collaboration can bring bold ideas to life.",
         "The following year, I completed Harvard’s CS50: Computer Science for Web Programming, a professional certification that challenged me to build full-stack projects and connect the dots between logic, design, and user experience.",
-        "Each of these experiences has shaped not only my technical foundation but also the way I approach learning: with persistence, curiosity, and a genuine excitement for building.",
+        "Each of these experiences shaped not only my technical foundation but also how I approach learning. With persistence, curiosity, and a genuine drive to keep building something real.",
       ],
     },
     {
       title: "debugging.with.grace_or.not_",
       description: [
-        "Debugging and I have a complicated relationship. There were times when the console screamed at me, and one missing semicolon nearly broke my spirit - but never my curiosity.",
-        "Every bug has felt like an invitation to dig deeper and understand a little more. Frustrating? Absolutely. But walking away was never an option. There’s always that moment when the problem finally clicks, and it’s worth every bit of the struggle.",
+        "Debugging taught me a lot. When I was learning the fundamentals, I made a point of solving errors myself first. Hours on Google, reading documentation, trying to understand what a cryptic error message actually meant. Frustrating? Absolutely. But it built something useful: I do not just fix the error, I want to understand why it happened.",
+        "Do I remember every error by heart? Absolutely not. But I know how to find the answer, stay calm when things break, and keep going. And yes, AI tools help a lot nowadays too.",
       ],
     },
     {
       title: "growth.purpose_",
       description: [
-        "For me, coding isn’t just a skill, it’s a way of thinking and expressing ideas with structure and care.",
-        "Each project I take on is a chance to improve my process, keep learning, and grow through real challenges and collaboration.",
+        "For me, building is not just a technical skill. It is a way of solving real problems for real people, with care and intention.",
+        "Each project I take on teaches me something new. Not just about code, but about the people who will use what I build and why that matters.",
       ],
     },
   ];
@@ -61,7 +61,7 @@ const AboutPage = () => {
     {
       title: "Details that matter",
       description:
-        "My background in people-focused work taught me that small choices, tone, timing, layout can completely change how something feels to others.",
+        "Years of working directly with people taught me that small choices in layout, tone, and timing can completely change how something feels to use. I carry that into every interface I build.",
     },
     {
       title: "Curiosity-led problem solving",
@@ -69,9 +69,9 @@ const AboutPage = () => {
         "From freeCodeCamp to CS50W, I like to understand the “why” behind things so I can build with clarity and purpose.",
     },
     {
-      title: "Collective momentum, Hackathon",
+      title: "Better together",
       description:
-        "Team projects and hackathons remind me how much creativity grows when people build together. It’s motivating and pushes me to learn faster.",
+        "Hackathons and team projects remind me how much faster ideas grow when people build together. #herHack 2024 proved that to me in 48 hours.",
     },
   ];
 
@@ -106,18 +106,18 @@ const AboutPage = () => {
     },
 
     {
-      title: "Aquatics Integrity Unit WordPress Refresh",
+      title: "Aquatics Integrity Unit - Website Rebuild",
       issuer: "AQIU Integrity Unit",
       year: "2024 - present",
       description:
-        "10% mandate to re-structure content and modernise UX for aquaticsintegrity.com.",
+        "Rebuilt and restructured the Aquatics Integrity Unit website (aquaticsintegrity.com) using WordPress and Elementor. Redesigned page architecture, implemented custom blog templates with grid layouts, and improved mobile responsiveness across the site.",
     },
     {
-      title: "Front-End Software Engineering Job Simulation",
-      issuer: "Skyscanner x Forage",
-      year: "2025",
+      title: "Aqua Inventory Hub",
+      issuer: "World Aquatics",
+      year: "2025 - present",
       description:
-        "Built and tested a Backpack React date picker while working through real-world product briefs.",
+        "Self-initiated full stack inventory management system built for World Aquatics. Django REST Framework backend, React frontend, deployed on Azure. Phase 1 deploys June 2026.",
     },
   ];
 
@@ -151,14 +151,14 @@ const AboutPage = () => {
             </span>
             <div className="space-y-6">
               <h1 className="text-4xl font-bold leading-tight text-pale-yellow md:text-5xl">
-                Self-taught frontend developer passionate about turning ideas
-                into clean, user-friendly web experiences.
+                I take time to understand how things work. Then I build.
               </h1>
               <p className="text-lg leading-relaxed text-light-gray">
-                Hey, I&apos;m Marianna - friends call me Maz. I&apos;m a
-                self-taught frontend developer based in Switzerland,
-                continuously learning through practice, hands-on projects, and
-                community challenges that help me grow.
+                Hey, I&apos;m Marianna - friends call me Maz. I come from years
+                of working across different industries, and that experience shapes
+                how I build. I take the time to understand how a team or company
+                actually works before I start. That is why what I build gets used.
+                I build with the real user in mind, not just the code.
               </p>
             </div>
           </div>
@@ -177,7 +177,7 @@ const AboutPage = () => {
                 15+ years curious
               </p>
               <p className="mt-1 text-sm font-semibold text-primary-blue-dark">
-                From hospitality to code, still fueled by curiosity.
+                Building real things for real people, still fueled by curiosity.
               </p>
             </div>
           </div>
@@ -312,12 +312,14 @@ const AboutPage = () => {
           <div className="relative flex flex-col items-center gap-6 md:flex-row md:justify-between">
             <div className="max-w-xl text-left space-y-3">
               <h3 className="text-2xl font-semibold text-light-yellow">
-                Open to frontend opportunities
+                Open to new opportunities
               </h3>
               <p className="text-light-gray">
-                I’m ready to bring my curiosity, persistence, and love for
-                clean, thoughtful interfaces to a frontend developer role. If
-                you think we’d be a good match, let’s talk.
+                I bring real experience, real projects, and a genuine drive to
+                keep growing. I am looking for an environment where that
+                combination is valued. Web development, digital project
+                coordination, or digital operations in Switzerland. On-site or
+                hybrid.
               </p>
             </div>
             <Link to="/contact" className="btn-secondary whitespace-nowrap">
