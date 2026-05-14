@@ -12,23 +12,23 @@ const AboutPreview = () => {
             About Me
           </h2>
           <p className="text-medium-gray text-lg leading-relaxed">
-            A self-taught frontend developer based in the Swiss Riviera. I enjoy
-            building modern, scalable, efficient, and engaging web applications
-            that balance design and usability.
+            Developer and builder based in the Swiss Riviera. I take the time
+            to understand how an organisation works before I build. That is why
+            what I build gets used.
           </p>
 
           <div className="flex flex-wrap gap-3 text-sm text-medium-gray">
+            <span className="rounded-full border border-(--border-glass) bg-glass-green/50 px-4 py-2 backdrop-blur">
+              Product Thinker
+            </span>
             <span className="rounded-full border border-(--border-glass) bg-glass-blue/60 px-4 py-2 backdrop-blur">
-              React & Modern CSS
+              Real Projects, Real Users
             </span>
             <span className="rounded-full border border-(--border-glass) bg-glass-yellow/60 px-4 py-2 backdrop-blur">
-              From WordPress roots
+              From WordPress Roots
             </span>
             <span className="rounded-full border border-(--border-glass) bg-glass-green/50 px-4 py-2 backdrop-blur">
-              Curiosity in action
-            </span>
-            <span className="rounded-full border border-(--border-glass) bg-glass-green/50 px-4 py-2 backdrop-blur">
-              From hospitality to code
+              Curiosity in Action
             </span>
           </div>
 

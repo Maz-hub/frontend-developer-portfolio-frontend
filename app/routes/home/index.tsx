@@ -12,7 +12,7 @@ export function meta({}: Route.MetaArgs) {
     {
       name: "description",
       content:
-        "Frontend Developer with recent hands-on experience building projects while learning React and modern web tools.!",
+        "Developer based in Switzerland with product thinking and hands-on experience building real applications for real organisations.",
     },
   ];
 }
@@ -29,6 +29,7 @@ export function HydrateFallback() {
 const HomePage = ({ loaderData }: Route.ComponentProps) => {
   const { projects } = loaderData;
 
+  // Skills grid displayed in the "Tech I work with" section
   const techSections = [
     {
       title: "Core stack",
@@ -58,6 +59,11 @@ const HomePage = ({ loaderData }: Route.ComponentProps) => {
       ],
     },
     {
+      title: "Also building with",
+      description: "Tools I use in real projects, still deepening my knowledge.",
+      items: ["Django", "Python", "PostgreSQL", "Azure", "Django REST Framework"],
+    },
+    {
       title: "Approach",
       description: "Principles I focus on while building.",
       items: [
@@ -73,13 +79,7 @@ const HomePage = ({ loaderData }: Route.ComponentProps) => {
     {
       title: "Next up",
       description: "Technologies I’m exploring to grow further.",
-      items: [
-        "TypeScript",
-        "Django",
-        "Testing",
-        "Performance Optimization",
-        "Advanced API Handling",
-      ],
+      items: ["TypeScript", "Testing", "Node.js", "Performance Optimization"],
     },
   ];
 
@@ -139,9 +139,11 @@ const HomePage = ({ loaderData }: Route.ComponentProps) => {
             Get in touch
           </h2>
           <p className="mt-3 text-medium-gray text-base md:text-lg">
-            I’m focused on growing as a frontend developer and open to
-            opportunities where I can contribute, learn, and build meaningful
-            web experiences.
+            {/* Short pitch shown below the About preview */}
+            I am looking for a role where I can contribute from day one -
+            building, improving, and solving real problems. I bring technical
+            skills and real-world context that comes from years of working with
+            people, not just code.
           </p>
           <div className="mt-6 flex justify-center">
             <Link to="/contact" className="btn-primary">
