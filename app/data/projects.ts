@@ -1,10 +1,10 @@
 import type { Project } from "~/types";
 
-// All portfolio projects -static data replacing Strapi CMS
+// All portfolio projects - static data replacing Strapi CMS
 export const projects: Project[] = [
   {
     id: 2,
-    documentId: "igrkq4kxmzhv9ajysl5sss4b",
+    documentId: "product-preview-card-component",
     title: "Product Preview Card Component",
     description: "A responsive product card with hover/focus states. Built to match the design closely and practice Grid + Flexbox.",
     image: "https://res.cloudinary.com/dtkasvfyn/image/upload/v1762888667/fem_product_preview_card_91ddd641f4.png",
@@ -17,7 +17,7 @@ export const projects: Project[] = [
   },
   {
     id: 3,
-    documentId: "ebfuz0ozrgjfzc8kztinybfe",
+    documentId: "3-column-preview-card-component",
     title: "3-Column Preview Card Component",
     description: "A responsive 3-column layout with hover states and balanced spacing. Practiced Flexbox and reusable component structure.",
     image: "https://res.cloudinary.com/dtkasvfyn/image/upload/v1762889319/fem_3_column_preview_card_542fe9ec90.png",
@@ -30,7 +30,7 @@ export const projects: Project[] = [
   },
   {
     id: 4,
-    documentId: "dd4oqd2o5gv6my65zs5t7fov",
+    documentId: "testimonials-grid-section",
     title: "Testimonials Grid Section",
     description: "A responsive testimonials grid built with CSS Grid. Focused on aligning different card sizes and keeping the layout balanced on both desktop and mobile screens.",
     image: "https://res.cloudinary.com/dtkasvfyn/image/upload/v1762889387/fem_testimonials_grid_30e0cb4d81.png",
@@ -43,7 +43,7 @@ export const projects: Project[] = [
   },
   {
     id: 5,
-    documentId: "gj7huvf2rctqsrelmp51fd6n",
+    documentId: "profile-card-component",
     title: "Profile Card Component",
     description: "Built a profile card layout using Flexbox. I worked on centering techniques, consistent spacing, and a simple visual balance between the background pattern and the card content.",
     image: "https://res.cloudinary.com/dtkasvfyn/image/upload/v1762889328/fem_profile_card_3495446dbb.png",
@@ -56,7 +56,7 @@ export const projects: Project[] = [
   },
   {
     id: 6,
-    documentId: "l3tgps99r9hcnz6k779hih30",
+    documentId: "workit-landing-page",
     title: "Workit Landing Page",
     description: "Landing page built from a Frontend Mentor design. I practiced layout structure, spacing, and hover states while keeping the sections aligned and readable on all screen sizes.",
     image: "https://res.cloudinary.com/dtkasvfyn/image/upload/v1762889332/fem_workit_landing_e7609ff492.png",
@@ -69,7 +69,7 @@ export const projects: Project[] = [
   },
   {
     id: 7,
-    documentId: "p6974qhuf0kfn5paau53qcdq",
+    documentId: "social-links-profile",
     title: "Social Links Profile",
     description: "Simple profile card with social links and hover effects. I focused on spacing, typography, and creating clean hover and focus states for each button.",
     image: "https://res.cloudinary.com/dtkasvfyn/image/upload/v1762889330/fem_social_links_profile_0a63d2f33a.png",
@@ -82,7 +82,7 @@ export const projects: Project[] = [
   },
   {
     id: 8,
-    documentId: "ziiwcdosfk2tqalht6ee6w84",
+    documentId: "huddle-landing-page",
     title: "Huddle Landing Page",
     description: "Landing page hero built with HTML and CSS. Includes a centered layout, illustration, and button with hover and focus states for accessibility.",
     image: "https://res.cloudinary.com/dtkasvfyn/image/upload/v1762889324/fem_huddle_landing_bf93e2f9ec.png",
@@ -95,7 +95,7 @@ export const projects: Project[] = [
   },
   {
     id: 9,
-    documentId: "x2ea62dw93r6edvsc3zxludb",
+    documentId: "skilled-e-learning-landing-page",
     title: "Skilled E-Learning Landing Page",
     description: "Responsive landing page built with SCSS and BEM. Practiced reusable mixins, structured class naming, and mobile-first layout adjustments to keep the design consistent across screens.",
     image: "https://res.cloudinary.com/dtkasvfyn/image/upload/v1762889331/fem_skilled_landing_a91643b687.png",
@@ -108,7 +108,7 @@ export const projects: Project[] = [
   },
   {
     id: 10,
-    documentId: "m0031sdhsffph1syro8c7a4g",
+    documentId: "interactive-rating-component",
     title: "Interactive Rating Component",
     description: "A small JavaScript project where users can select and submit a rating, then see a thank-you state. Built with HTML, CSS, and JavaScript to explore DOM manipulation and interactive UI behavior.",
     image: "https://res.cloudinary.com/dtkasvfyn/image/upload/v1762889325/fem_interactive_rating_eb41ffa1cf.png",
@@ -121,7 +121,7 @@ export const projects: Project[] = [
   },
   {
     id: 11,
-    documentId: "mqleoi6g1rdbd85ncae93qh6",
+    documentId: "newsletter-sign-up-form",
     title: "Newsletter Sign-Up Form with Success Message",
     description: "Responsive React project where users can subscribe by entering their email. Built with functional components, props, and lifted state to handle form validation, success feedback, and conditional rendering with Tailwind CSS 4.",
     image: "https://res.cloudinary.com/dtkasvfyn/image/upload/v1762889325/fem_newsletter_signup_91e3cc4dfe.png",
@@ -134,7 +134,7 @@ export const projects: Project[] = [
   },
   {
     id: 12,
-    documentId: "h1twu7ecr7jdkiq8z0qy9r6u",
+    documentId: "advice-generator-app",
     title: "Advice Generator App",
     description: "React app that fetches random advice from the Advice Slip API. Built with functional components, useState and useEffect hooks, and styled with Tailwind CSS 4 for a clean, responsive layout.",
     image: "https://res.cloudinary.com/dtkasvfyn/image/upload/v1762889320/fem_advice_generator_050d1dc562.png",
@@ -147,7 +147,7 @@ export const projects: Project[] = [
   },
   {
     id: 13,
-    documentId: "qtn8x3tzvmwj234m2tp7cm23",
+    documentId: "character-counter",
     title: "Character Counter",
     description: "React mini app that counts characters, words, and lines in real time. Built with Vite and Tailwind CSS 4 using custom theme tokens, dark mode, and utility classes for a clean, responsive layout.",
     image: "https://res.cloudinary.com/dtkasvfyn/image/upload/v1762889319/fem_character_counter_595a03e582.png",
@@ -160,7 +160,7 @@ export const projects: Project[] = [
   },
   {
     id: 14,
-    documentId: "bnuhkhnwphvuwgbhxiisxkh9",
+    documentId: "swiss-romande-hikes",
     title: "Swiss Romande Hikes",
     description: "CS50W Capstone project -a personal hiking guide and trail explorer for the French-speaking region of Switzerland. Built with Django and JavaScript, featuring an interactive Mapbox map, trail filtering, live weather data from Open-Meteo API, and a comment system with real-time updates.",
     image: "https://res.cloudinary.com/dtkasvfyn/image/upload/v1762889328/cs50w_swiss_romande_e69f05f00b.png",
@@ -173,7 +173,7 @@ export const projects: Project[] = [
   },
   {
     id: 15,
-    documentId: "umbq7rmjj0y7bhdvx01kr2sw",
+    documentId: "network-project",
     title: "Network Project",
     description: "Simplified social networking app inspired by Twitter, built with Django and JavaScript. Users can create, edit, and like posts, follow others, and view personalized feeds. Includes pagination, authentication, and JavaScript-based updates without page reloads.",
     image: "https://res.cloudinary.com/dtkasvfyn/image/upload/v1762889319/cs50w_network_24656e2547.png",
@@ -186,7 +186,7 @@ export const projects: Project[] = [
   },
   {
     id: 16,
-    documentId: "fasb6qvfmc83aasq2yoxn1uw",
+    documentId: "ribe-photo-portfolio",
     title: "Ribe Photo Portfolio Web App",
     description: "A responsive photography portfolio built for a professional photographer to showcase visual galleries. Developed with Flask and Jinja templates, styled using SCSS and Bootstrap 5, and integrated with Cloudinary for optimized image delivery. Includes a working contact form powered by SendGrid and deployed on Heroku.",
     image: "https://res.cloudinary.com/dtkasvfyn/image/upload/v1762889343/ribe_photo_portfolio_611c834271.png",
@@ -199,8 +199,8 @@ export const projects: Project[] = [
   },
   {
     id: 21,
-    documentId: "aqiu-wordpress-rebuild",
-    title: "Aquatics Integrity Unit -Website Rebuild",
+    documentId: "aquatics-integrity-unit-website-rebuild",
+    title: "Aquatics Integrity Unit - Website Rebuild",
     description: "Restructured and modernised the Aquatics Integrity Unit website (aquaticsintegrity.com) using WordPress and Elementor. Rebuilt page architecture from scratch, implemented custom blog templates with grid layouts and filtering systems, and improved mobile responsiveness across the site.",
     image: "/images/aqiu-website.png",
     url: "https://www.aquaticsintegrity.com",
@@ -212,7 +212,7 @@ export const projects: Project[] = [
   },
   {
     id: 17,
-    documentId: "alur36s8dmc7nhxdwh4dwq0s",
+    documentId: "browser-extension-manager-ui",
     title: "Browser Extension Manager UI",
     description: "The project simulates a browser extension manager where users can toggle, filter, remove, and theme their extensions.",
     image: "https://res.cloudinary.com/dtkasvfyn/image/upload/v1762889620/Extension_list_UI_8599dd622a.png",
@@ -225,7 +225,7 @@ export const projects: Project[] = [
   },
   {
     id: 18,
-    documentId: "gkcjib6h9q03sudor5lxo190",
+    documentId: "mail",
     title: "Mail",
     description: "A full-featured email client built with Django and JavaScript for CS50W. Includes inbox, reply, archive, and dynamic mailbox views.",
     image: "https://res.cloudinary.com/dtkasvfyn/image/upload/v1763317577/cs50w_mail_52f4b35eea.png",
@@ -238,7 +238,7 @@ export const projects: Project[] = [
   },
   {
     id: 19,
-    documentId: "e2c02bv2h7rs60kljhpl1ba2",
+    documentId: "simon-and-federica-wedding-website",
     title: "Simon & Federica Wedding Website",
     description: "A clean, minimal wedding website for a couple's July 2026 wedding. Features event information, RSVP form with automated email notifications via Netlify Forms, photo gallery, and countdown timer. Fully responsive with mobile-first approach.",
     image: "https://res.cloudinary.com/dtkasvfyn/image/upload/v1769694107/Simon_Federica_b7e63d344b.jpg",
