@@ -24,6 +24,7 @@ const Hero = () => {
                     src="./images/maz_profile_photo.webp"
                     alt="Marianna Mirabile"
                     className="absolute inset-0 w-full h-full rounded-full object-cover backface-hidden"
+                    fetchPriority="high"
                   />
                   <img
                     src="./images/maz_profile_photo_mountains2.webp"
