@@ -14,6 +14,7 @@ const Navbar = () => {
       <div className="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
         <NavLink
           to="/"
+          aria-label="Home"
           className="flex items-center gap-2 text-lg font-bold text-accent-green"
         >
           <IoCodeSlashOutline className="text-light-yellow text-4xl" />
