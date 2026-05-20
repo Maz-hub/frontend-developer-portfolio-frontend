@@ -22,10 +22,6 @@ export const links: Route.LinksFunction = () => [
     crossOrigin: "anonymous",
   },
   {
-    rel: "stylesheet",
-    href: "https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&display=swap",
-  },
-  {
     rel: "icon",
     type: "image/svg+xml",
     href: "/images/favicon.svg",
@@ -64,6 +60,19 @@ gtag('config', 'G-1MNYVQ79SV');`,
 
         <Meta />
         <Links />
+        <link
+          rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&display=swap"
+          media="print"
+          onLoad={(e) => {
+            (e.currentTarget as HTMLLinkElement).media = "all";
+          }}
+        />
+        <noscript
+          dangerouslySetInnerHTML={{
+            __html: `<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&display=swap">`,
+          }}
+        />
       </head>
       <body>
         <NavigationLoader />
