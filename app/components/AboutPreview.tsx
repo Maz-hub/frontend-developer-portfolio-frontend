@@ -48,7 +48,7 @@ const AboutPreview = () => {
             <img
               src="/images/maz_profile_photo_mountains_1.webp"
               alt="Marianna Mirabile portrait"
-              className="h-full w-full object-cover transition duration-500 group-hover:scale-[1.03]"
+              className="h-full w-full object-cover transition duration-500"
             />
           </div>
           <div className="pointer-events-none absolute -bottom-6 left-1/2 hidden w-[140%] -translate-x-1/2 rounded-full bg-glass-yellow/40 py-6 blur-2xl transition duration-500 group-hover:blur-3xl md:block" />

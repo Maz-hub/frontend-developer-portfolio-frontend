@@ -10,7 +10,6 @@ type FeaturedProjectsProps = {
 
 const FeaturedProjects = ({
   projects,
-  count = 4,
   className,
 }: FeaturedProjectsProps) => {
   if (projects.length === 0) return null;
@@ -37,7 +36,7 @@ const FeaturedProjects = ({
               <img
                 src={project.image}
                 alt={project.title}
-                className="w-full h-52 object-cover transition sm:h-64 md:h-full md:hover:scale-[1.03]"
+                className="w-full h-52 object-cover transition sm:h-64 md:h-full"
               />
             </div>
 
@@ -57,7 +56,7 @@ const FeaturedProjects = ({
 
               {project.tech?.length ? (
                 <div className="flex flex-wrap gap-2">
-                  {project.tech.map((tech, index) => (
+                  {project.tech.map((tech) => (
                     <span
                       key={tech}
                       className="rounded-full border border-(--border-glass) px-3 py-1 text-xs  uppercase tracking-[0.3em] bg-glass-blue text-light-gray"
